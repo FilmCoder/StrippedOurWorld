@@ -17,7 +17,7 @@ MonoBehaviour:
   Is3D: 0
   IsLowQualityEffect: 0
   PixelPadding: 2
-  RecursionEnabled: 0
+  RecursionEnabled: 1
   RendererPrefab: {fileID: 1232659475489786, guid: 2635c87c0e578c546b04225f3d5ca1a4,
     type: 3}
   RenderingEnabled: 1

@@ -801,29 +801,51 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1018542613260714, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1042068398896484, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1069810561297538, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240021386054054, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240021386054054, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249403603419734, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1333371105138580, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 224652711856650928, guid: e42c1a00cfab56a40a0a89fa64601015,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1918843811857862, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+    - target: {fileID: 1337429648932174, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1879583049424386, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+    - target: {fileID: 1421556080153574, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+      propertyPath: m_Name
+      value: OutroTextTop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1421556080153574, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 224980647184760636, guid: e42c1a00cfab56a40a0a89fa64601015,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
+    - target: {fileID: 1422762558939114, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1821133387019142, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+    - target: {fileID: 1476047691962502, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
@@ -832,6 +854,62 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1495381881388844, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498646788033586, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506694650131440, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+      propertyPath: m_Name
+      value: OutroText Bottom
+      objectReference: {fileID: 0}
+    - target: {fileID: 1506694650131440, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1560214245067970, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1560214245067970, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1624310731137580, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738470195021140, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821133387019142, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879583049424386, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899779286690494, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918843811857862, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1942830265910668, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963630691941850, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1982646522603526, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
@@ -883,139 +961,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 223198088755785610, guid: e42c1a00cfab56a40a0a89fa64601015,
-        type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 223198088755785610, guid: e42c1a00cfab56a40a0a89fa64601015,
-        type: 3}
-      propertyPath: m_RenderMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 223198088755785610, guid: e42c1a00cfab56a40a0a89fa64601015,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 392531708}
-    - target: {fileID: 223198088755785610, guid: e42c1a00cfab56a40a0a89fa64601015,
-        type: 3}
-      propertyPath: m_PlaneDistance
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114302167747281360, guid: e42c1a00cfab56a40a0a89fa64601015,
-        type: 3}
-      propertyPath: m_Text
-      value: WASD to move, Shift to sprint, mouse to look around. Escape to free cursor.
-        Try to find a way out!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1560214245067970, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1560214245067970, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 224119528789482332, guid: e42c1a00cfab56a40a0a89fa64601015,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224119528789482332, guid: e42c1a00cfab56a40a0a89fa64601015,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -114
-      objectReference: {fileID: 0}
-    - target: {fileID: 224344155158642982, guid: e42c1a00cfab56a40a0a89fa64601015,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.80499995
-      objectReference: {fileID: 0}
-    - target: {fileID: 224831830720280008, guid: e42c1a00cfab56a40a0a89fa64601015,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 54187317497946970, guid: e42c1a00cfab56a40a0a89fa64601015,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114959882348439884, guid: e42c1a00cfab56a40a0a89fa64601015,
-        type: 3}
-      propertyPath: moveSpeed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 114959882348439884, guid: e42c1a00cfab56a40a0a89fa64601015,
-        type: 3}
-      propertyPath: lockCursor
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1018542613260714, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1476047691962502, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1624310731137580, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1421556080153574, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
-      propertyPath: m_Name
-      value: OutroTextTop
-      objectReference: {fileID: 0}
-    - target: {fileID: 1421556080153574, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963630691941850, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1506694650131440, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
-      propertyPath: m_Name
-      value: OutroText Bottom
-      objectReference: {fileID: 0}
-    - target: {fileID: 1506694650131440, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114509973452099236, guid: e42c1a00cfab56a40a0a89fa64601015,
-        type: 3}
-      propertyPath: m_Text
-      value: 'Thanks for checking out PortalKit Pro''s ''Dungeon'' demo!
-
-        If you want to make Unity projects with similar mechanics,
-
-        consider picking up a license at the link below.
-
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 1042068398896484, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1942830265910668, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1240021386054054, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1240021386054054, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1249403603419734, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 20713175224946718, guid: e42c1a00cfab56a40a0a89fa64601015,
         type: 3}
       propertyPath: m_AllowMSAA
@@ -1046,9 +991,16 @@ PrefabInstance:
       propertyPath: m_TargetEye
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1069810561297538, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
-      propertyPath: m_Layer
+    - target: {fileID: 54187317497946970, guid: e42c1a00cfab56a40a0a89fa64601015,
+        type: 3}
+      propertyPath: m_CollisionDetection
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114302167747281360, guid: e42c1a00cfab56a40a0a89fa64601015,
+        type: 3}
+      propertyPath: m_Text
+      value: WASD to move, Shift to sprint, mouse to look around. Escape to free cursor.
+        Try to find a way out!
       objectReference: {fileID: 0}
     - target: {fileID: 114331698231418764, guid: e42c1a00cfab56a40a0a89fa64601015,
         type: 3}
@@ -1105,29 +1057,77 @@ PrefabInstance:
       propertyPath: BufferColliders.Array.data[2]
       value: 
       objectReference: {fileID: 1104872501}
-    - target: {fileID: 1738470195021140, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
-      propertyPath: m_Layer
-      value: 2
+    - target: {fileID: 114509973452099236, guid: e42c1a00cfab56a40a0a89fa64601015,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Thanks for checking out PortalKit Pro''s ''Dungeon'' demo!
+
+        If you want to make Unity projects with similar mechanics,
+
+        consider picking up a license at the link below.
+
+
+'
       objectReference: {fileID: 0}
-    - target: {fileID: 1982646522603526, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
-      propertyPath: m_Layer
-      value: 2
+    - target: {fileID: 114959882348439884, guid: e42c1a00cfab56a40a0a89fa64601015,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 1422762558939114, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
-      propertyPath: m_Layer
-      value: 2
+    - target: {fileID: 114959882348439884, guid: e42c1a00cfab56a40a0a89fa64601015,
+        type: 3}
+      propertyPath: lockCursor
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1337429648932174, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
-      propertyPath: m_Layer
-      value: 2
+    - target: {fileID: 223198088755785610, guid: e42c1a00cfab56a40a0a89fa64601015,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1498646788033586, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
-      propertyPath: m_Layer
-      value: 2
+    - target: {fileID: 223198088755785610, guid: e42c1a00cfab56a40a0a89fa64601015,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1899779286690494, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}
-      propertyPath: m_Layer
-      value: 2
+    - target: {fileID: 223198088755785610, guid: e42c1a00cfab56a40a0a89fa64601015,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 392531708}
+    - target: {fileID: 223198088755785610, guid: e42c1a00cfab56a40a0a89fa64601015,
+        type: 3}
+      propertyPath: m_PlaneDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224119528789482332, guid: e42c1a00cfab56a40a0a89fa64601015,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224119528789482332, guid: e42c1a00cfab56a40a0a89fa64601015,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -114
+      objectReference: {fileID: 0}
+    - target: {fileID: 224344155158642982, guid: e42c1a00cfab56a40a0a89fa64601015,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.80499995
+      objectReference: {fileID: 0}
+    - target: {fileID: 224652711856650928, guid: e42c1a00cfab56a40a0a89fa64601015,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224831830720280008, guid: e42c1a00cfab56a40a0a89fa64601015,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 224980647184760636, guid: e42c1a00cfab56a40a0a89fa64601015,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114328210135288330, guid: e42c1a00cfab56a40a0a89fa64601015, type: 3}

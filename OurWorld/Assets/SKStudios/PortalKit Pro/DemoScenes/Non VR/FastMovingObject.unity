@@ -936,6 +936,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23458244126129406, guid: ef16e35194c721245ac5b1e08e54a0f2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ac6766ef3563f7a4c96a49ba6bf10488, type: 2}
     - target: {fileID: 114638865253683124, guid: ef16e35194c721245ac5b1e08e54a0f2,
         type: 3}
       propertyPath: Color.r
@@ -951,11 +956,6 @@ PrefabInstance:
       propertyPath: Color.b
       value: 0.30882353
       objectReference: {fileID: 0}
-    - target: {fileID: 23458244126129406, guid: ef16e35194c721245ac5b1e08e54a0f2,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ac6766ef3563f7a4c96a49ba6bf10488, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef16e35194c721245ac5b1e08e54a0f2, type: 3}
 --- !u!1001 &634658065
@@ -997,6 +997,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23458244126129406, guid: ef16e35194c721245ac5b1e08e54a0f2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ac6766ef3563f7a4c96a49ba6bf10488, type: 2}
     - target: {fileID: 114638865253683124, guid: ef16e35194c721245ac5b1e08e54a0f2,
         type: 3}
       propertyPath: Color.r
@@ -1012,11 +1017,6 @@ PrefabInstance:
       propertyPath: Color.b
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 23458244126129406, guid: ef16e35194c721245ac5b1e08e54a0f2,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ac6766ef3563f7a4c96a49ba6bf10488, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef16e35194c721245ac5b1e08e54a0f2, type: 3}
 --- !u!1001 &660675631
@@ -1639,6 +1639,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23458244126129406, guid: ef16e35194c721245ac5b1e08e54a0f2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ac6766ef3563f7a4c96a49ba6bf10488, type: 2}
     - target: {fileID: 114638865253683124, guid: ef16e35194c721245ac5b1e08e54a0f2,
         type: 3}
       propertyPath: Color.r
@@ -1654,11 +1659,6 @@ PrefabInstance:
       propertyPath: Color.b
       value: 0.30882353
       objectReference: {fileID: 0}
-    - target: {fileID: 23458244126129406, guid: ef16e35194c721245ac5b1e08e54a0f2,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ac6766ef3563f7a4c96a49ba6bf10488, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef16e35194c721245ac5b1e08e54a0f2, type: 3}
 --- !u!1 &884954644
@@ -2513,6 +2513,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23458244126129406, guid: ef16e35194c721245ac5b1e08e54a0f2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ac6766ef3563f7a4c96a49ba6bf10488, type: 2}
     - target: {fileID: 114638865253683124, guid: ef16e35194c721245ac5b1e08e54a0f2,
         type: 3}
       propertyPath: Color.r
@@ -2528,11 +2533,6 @@ PrefabInstance:
       propertyPath: Color.b
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 23458244126129406, guid: ef16e35194c721245ac5b1e08e54a0f2,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: ac6766ef3563f7a4c96a49ba6bf10488, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef16e35194c721245ac5b1e08e54a0f2, type: 3}
 --- !u!1 &1806411761
