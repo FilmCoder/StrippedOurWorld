@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d1497b732a1dc2b4c8295e9840e7e1e6, type: 3}
-  m_Name: StandardPortal
+  m_Name: PortalSpawner_Settings_0
   m_EditorClassIdentifier: 
-  _mask: {fileID: 2800000, guid: aeb01baf94fb4024c864ff6f3f7eff73, type: 3}
-  _originalMaterial: {fileID: 2100000, guid: 99e30c7b307f37f47a5ce468c353b4fe, type: 2}
+  _mask: {fileID: 0}
+  _originalMaterial: {fileID: 2100000, guid: d99bd3f37894b684e84547cbe0af1df8, type: 2}
   Is3D: 0
   IsLowQualityEffect: 0
   PixelPadding: 2
-  RecursionEnabled: 0
+  RecursionEnabled: 1
   RendererPrefab: {fileID: 1232659475489786, guid: 2635c87c0e578c546b04225f3d5ca1a4,
     type: 3}
   RenderingEnabled: 1
