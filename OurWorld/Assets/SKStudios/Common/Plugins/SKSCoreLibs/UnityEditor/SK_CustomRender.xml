@@ -1,0 +1,399 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SK_CustomRender</name>
+    </assembly>
+    <members>
+        <member name="T:SKStudios.Portals.CameraMarker">
+            <summary>
+                Marker that tracks which camera drives child cameras.
+            </summary>
+        </member>
+        <member name="F:SKStudios.Portals.CameraMarker.MarkerDictionary">
+            <summary>
+                Dictionary cache for faster lookups
+            </summary>
+        </member>
+        <member name="F:SKStudios.Portals.CameraMarker.CurrentRenderer">
+            <summary>
+                The Mesh Renderer that this camera is currently tending to
+            </summary>
+        </member>
+        <member name="M:SKStudios.Portals.CameraMarker.GetMarker(UnityEngine.Camera)">
+            <summary>
+                Returns the CameraMarker for a given Camera if one is assigned
+            </summary>
+            <param name="camera">the camera to check for</param>
+            <returns>the marker</returns>
+        </member>
+        <member name="T:SKStudios.Rendering.SimplifiedMeshCache">
+            <summary>
+                Class that contains simplified (duplicate verts removed) versions of the meshes associated with mesh
+                renderers for the purpose of rendering effect cams
+            </summary>
+        </member>
+        <member name="M:SKStudios.Rendering.SimplifiedMeshCache.GetSimplifiedMesh(UnityEngine.Mesh@)">
+            <summary>
+                Return a simplified version of a mesh
+            </summary>
+            <param name="mesh">Mesh to simplify</param>
+            <returns>The vertices that constitute the simplified mesh</returns>
+        </member>
+        <member name="M:SKStudios.Rendering.SimplifiedMeshCache.GenerateMesh(UnityEngine.Mesh@)">
+            <summary>
+                Generates a simplified mesh given a MeshRenderer. This
+                could inarguably be more performant, but it's only used
+                on instantiation time so unless it's a problem, whatever.
+                <param name="mesh">Mesh to generate a reduced version of</param>
+            </summary>
+        </member>
+        <member name="T:SKStudios.Rendering.RenderUtils">
+            <summary>
+                Class offering a number of rendering convenience utilities. This entire class is
+                pure hotpath pain points.
+            </summary>
+        </member>
+        <member name="M:SKStudios.Rendering.RenderUtils.CameraSpacePlane(UnityEngine.Camera,UnityEngine.Vector3,UnityEngine.Vector3,System.Single,System.Single)">
+            <summary>
+                Gets the camera space plane of an object's normal
+            </summary>
+            <param name="cam">The camera to check</param>
+            <param name="pos">The position of the object</param>
+            <param name="normal">The normal of the object</param>
+            <param name="sideSign">The side of the plane (negative is away)</param>
+            <param name="fudgeFactor">The offset of the clip plane</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Rendering.RenderUtils.ScissorMatrix(UnityEngine.Matrix4x4,UnityEngine.Rect@)">
+            <summary>
+                Returns a "scissor matrix" derived from a given matrix and a screen space rectangle. This is used to save on
+                rendering time.
+            </summary>
+            <param name="matrixIn">The matrix to modify</param>
+            <param name="rect">The screenspace rectangle</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Rendering.RenderUtils.RendererToScreenRect(UnityEngine.Camera,System.Single,UnityEngine.Renderer,UnityEngine.Mesh@)">
+            <summary>
+                Turns bounds from an object into a screenspace rectangle
+            </summary>
+            <param name="cam">The camera to measure with</param>
+            <param name="scale">Factor to scale the rect by</param>
+            <param name="rend">The renderer to measure</param>
+            <param name="mesh">The mesh that the renderer is using</param>
+            <returns>Screen Rect</returns>
+        </member>
+        <member name="M:SKStudios.Rendering.RenderUtils.FitRect(UnityEngine.Rect@)">
+            <summary>
+                Shrinks a rect to fit within a normalized rect
+            </summary>
+            <param name="rectIn"></param>
+            <returns>fitted rect</returns>
+        </member>
+        <member name="M:SKStudios.Rendering.RenderUtils.FitRect(UnityEngine.Rect@,UnityEngine.Rect@)">
+            <summary>
+                Shrinks a rect to fit within a second rect
+            </summary>
+            <param name="rectIn"></param>
+            <param name="bounds"></param>
+            <returns>fitted rect</returns>
+        </member>
+        <member name="M:SKStudios.Rendering.RenderUtils.CalculateReflectionMatrix(UnityEngine.Matrix4x4@,UnityEngine.Vector4)">
+            <summary>
+                Calculates the projection matrix required to render a reflected image given a matrix and a screen-space plane
+            </summary>
+            <param name="refl">The matrix to modify</param>
+            <param name="p">The plane to reflect about</param>
+        </member>
+        <member name="M:SKStudios.Rendering.RenderUtils.CorrectInversion(System.Int32,SKStudios.Rendering.RenderUtils.RenderDirection)">
+            <summary>
+                Correct the inversion state for the current depth
+            </summary>
+            <param name="depth">depth of the render</param>
+            <param name="direction">Is this winding up or unwinding the render?</param>
+        </member>
+        <member name="M:SKStudios.Rendering.RenderUtils.GetDepthInfoBuffer(UnityEngine.Camera)">
+            <summary>
+            </summary>
+            <param name="cam"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SKStudios.Rendering.RenderUtils.UpdateStepComparer">
+            <summary>
+                Custom comparer to prevent garbage collection.
+                todo: Replace use of bounds with an inhouse 2d alternative to make this pointless in its entirety
+            </summary>
+        </member>
+        <member name="T:SKStudios.ProtectedLibs.Rendering.SKEffectRenderer">
+            <summary>
+                Obfuscated class containing SKS Effect Renderer Logic
+            </summary>
+        </member>
+        <member name="M:SKStudios.ProtectedLibs.Rendering.SKEffectRenderer.#ctor(UnityEngine.Transform,UnityEngine.Transform)">
+            <summary>
+                Init this SKEffectRenderer
+            </summary>
+            <param name="originTransform">Origin of the effect renderer</param>
+            <param name="destinationTransform">Origin of the other effect renderer</param>
+        </member>
+        <member name="P:SKStudios.ProtectedLibs.Rendering.SKEffectRenderer.DepthTransferEvent">
+            <summary>
+                The Camera Event to call the cmdbuffer on
+            </summary>
+        </member>
+        <member name="P:SKStudios.ProtectedLibs.Rendering.SKEffectRenderer.WorldPosTransferBuffer">
+            <summary>
+                CommandBuffer that rejects
+            </summary>
+        </member>
+        <member name="P:SKStudios.ProtectedLibs.Rendering.SKEffectRenderer.PrevRects">
+            <summary>
+                PrevRects functions like a stack of all the previously-used
+                rectangles in a recursive render, for the purposes of
+                determining how many fragments to render for the final image.
+                Real size of rects on stack   Actual stored size of B
+                +--------------------------+   +-----------------------+
+                |Identity(size of screen)  |   |A                      |
+                | +-----------------+      |   |                       |
+                | |A                |      |   |                       |
+                | |                 |      |   |            +-------+  |
+                | |         +---+   |      |   |            |B      |  |
+                | |      +  | B |---------------------------->      |  |
+                | |      |  +---+   |      |   |^           |       |  |
+                | |      |          |      |   /            +-------+  |
+                | +------|----------+      |  /|                       |
+                +--------|-----------------+ / +-----------------------+
+                |                           /
+                +--------|-----------------/   All values on the stack are
+                |        |                /|   relative to the previously
+                | +------|----------+    / |   stored value. Because of
+                | |A     v          |   +  |   this, it is important to
+                | |                 |      |   get the real size of the
+                | |                 |      |   rectangles by iteratively
+                | |                 |      |   multiplying every rect value
+                | |                 |      |   by the size of each of those
+                | |                 |      |   beneath it before using it for
+                | +-----------------+      |   rendering purposes.
+                +--------------------------+
+                Actual stored size of A
+            </summary>
+        </member>
+        <member name="P:SKStudios.ProtectedLibs.Rendering.SKEffectRenderer.MaxVRecursion">
+            <summary>
+                Depth-sensitive components ended up piggybacking instantaition off of this property
+            </summary>
+        </member>
+        <member name="M:SKStudios.ProtectedLibs.Rendering.SKEffectRenderer.ReenableRenderer">
+            <summary>
+            Re-enable renderer disabled to prevent self-rendering
+            </summary>
+        </member>
+        <member name="M:SKStudios.ProtectedLibs.Rendering.SKEffectRenderer.RenderCamera(SKStudios.Common.Rendering.RenderData)">
+            <summary>
+                Renders a camera and applies it to a material for a given MeshRenderer, as if the source renderer
+                was a window to the target renderer. Additionally, it only renders fragments within the bounds
+                of the source renderer, to save on render costs.
+                +---------------------------------------+
+                |Screen                                 |
+                |                                       |
+                |                                       |
+                |           +----------------+          |
+                |           |Visible portion |          |
+                |           |                |          |
+                |           | We want to     |          |
+                |           | render this    |          |
+                |           |                |          |
+                |           |                |          |
+                |           |                |          |
+                |           |                |          |
+                |           +----------------+          |
+                |                                       |
+                | We do not want to render this         |
+                +---------------------------------------+
+            </summary>
+            <param name="renderData">RenderData for use while rendering this frame</param>
+        </member>
+        <member name="M:SKStudios.ProtectedLibs.Rendering.SKEffectRenderer.AbortStateRestore(System.Int32,System.Boolean)">
+            <summary>
+                Abort the current render, restoring all state machine parameters
+            </summary>
+            <param name="depth">Current depth</param>
+            <param name="mirror">Is the renderer a mirror?</param>
+        </member>
+        <member name="M:SKStudios.ProtectedLibs.Rendering.SKEffectRenderer.VisibilityCheck(SKStudios.Common.Rendering.RenderProperties,UnityEngine.Renderer,UnityEngine.Mesh,UnityEngine.Collider,UnityEngine.Collider,SKStudios.Portals.CameraMarker)">
+            <summary>
+                Ensure that the renderer is fully visible for recursion purposes. When
+                Unity fixes occlusion culling for Oblique Matrices, add a switch that
+                supports this feature. This is kind of a hack.
+            </summary>
+            <param name="mesh">Origin Mesh</param>
+            <param name="sourceCollider">Collider on the requesting <see cref="T:SKStudios.ProtectedLibs.Rendering.SKEffectRenderer" /></param>
+            <param name="targetCollider">Colider on the requested <see cref="T:SKStudios.ProtectedLibs.Rendering.SKEffectRenderer" /></param>
+            <param name="marker"><see cref="T:SKStudios.Portals.CameraMarker" /> on the active <see cref="T:UnityEngine.Camera" /></param>
+            <param name="renderProperties"><see cref="T:SKStudios.Common.Rendering.RenderProperties" /> that define this render.</param>
+            <param name="sourceRenderer">Renderer on the requesting <see cref="T:SKStudios.ProtectedLibs.Rendering.SKEffectRenderer" /></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.ProtectedLibs.Rendering.SKEffectRenderer.TerminateRender">
+            <summary>
+                called when all portals have been fully rendered
+            </summary>
+        </member>
+        <member name="M:SKStudios.ProtectedLibs.Rendering.SKEffectRenderer.ClearTempRtRoutine">
+            <summary>
+                Coroutine to automatically do end-of-frame cleanup
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.ProtectedLibs.Rendering.SKEffectRenderer.ClearTempRTs">
+            <summary>
+                Clear out all the temporary rendertextures that were generated this frame
+            </summary>
+        </member>
+        <member name="T:SKStudios.ProtectedLibs.Rendering.SKSRenderLib">
+            <summary>
+                Render Library that drives image effects
+            </summary>
+        </member>
+        <member name="F:SKStudios.ProtectedLibs.Rendering.SKSRenderLib.Initialized">
+            <summary>
+                Is this object Initialized?
+            </summary>
+        </member>
+        <member name="M:SKStudios.ProtectedLibs.Rendering.SKSRenderLib.Initialize(UnityEngine.Transform,UnityEngine.Transform,UnityEngine.Camera[])">
+            <summary>
+                Initialize the renderer
+            </summary>
+            <param name="portalTransform">The origin transform</param>
+            <param name="portalDestination">The target transform</param>
+            <param name="cameras">Cameras that this RenderLib uses</param>
+        </member>
+        <member name="M:SKStudios.ProtectedLibs.Rendering.SKSRenderLib.RenderCamera(SKStudios.Common.Rendering.RenderData)">
+            <summary>
+                Renders one eye of an image effect
+            </summary>
+            <param name="renderData">RenderData instance containing the RenderData for this render</param>
+        </member>
+        <member name="M:SKStudios.ProtectedLibs.Rendering.SKSRenderLib.TerminateRender">
+            <summary>
+                Terminate the current render
+            </summary>
+        </member>
+        <member name="M:SKStudios.ProtectedLibs.Rendering.SKSRenderLib.ClearUnwinder">
+            <summary>
+                Clear all entries from the render state unwinder
+            </summary>
+        </member>
+        <member name="T:SKStudios.Common.Rendering.RenderStateUnwinder">
+            <summary>
+                Stack-based approach to storing render state
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Rendering.RenderStateUnwinder._nodes">
+            <summary>
+                Index = depth
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Rendering.RenderStateUnwinder.SpawnUnwinder(System.Int32)">
+            <summary>
+                Instantiate a <see cref="T:SKStudios.Common.Rendering.RenderStateUnwinder" /> that supports
+                the given depth
+            </summary>
+            <param name="depth"></param>
+        </member>
+        <member name="M:SKStudios.Common.Rendering.RenderStateUnwinder.SnapshotState(System.Int32,UnityEngine.Renderer,UnityEngine.RenderTexture,System.Int32)">
+            <summary>
+                Snapshot the current state of the material to be restored later
+            </summary>
+            <param name="depth">the current depth</param>
+            <param name="renderer">the renderer to snapshot</param>
+            <param name="rt">the texture to snapshot</param>
+            <param name="name">the name ID of the texture on the material</param>
+        </member>
+        <member name="M:SKStudios.Common.Rendering.RenderStateUnwinder.SnapshotState(System.Int32,UnityEngine.Renderer,UnityEngine.Vector4,System.Int32)">
+            <summary>
+                Snapshot the current state of the material to be restored later
+            </summary>
+            <param name="depth">the current depth</param>
+            <param name="renderer">the renderer to snapshot</param>
+            <param name="rt">the texture to snapshot</param>
+            <param name="name">the name ID of the texture on the material</param>
+        </member>
+        <member name="M:SKStudios.Common.Rendering.RenderStateUnwinder.SnapshotState(System.Int32,UnityEngine.Renderer,System.Single,System.Int32)">
+            <summary>
+                Snapshot the current state of the material to be restored later
+            </summary>
+            <param name="depth">the current depth</param>
+            <param name="renderer">the renderer to snapshot</param>
+            <param name="val">the float to snapshot</param>
+            <param name="name">the name ID of the texture on the material</param>
+        </member>
+        <member name="M:SKStudios.Common.Rendering.RenderStateUnwinder.SnapshotState(System.Int32,UnityEngine.Renderer,UnityEngine.Matrix4x4,System.Int32)">
+            <summary>
+                Snapshot the current state of the material to be restored later
+            </summary>
+            <param name="depth">the current depth</param>
+            <param name="renderer">the renderer to snapshot</param>
+            <param name="val">the Matrix to snapshot</param>
+            <param name="name">the name ID of the texture on the material</param>
+        </member>
+        <member name="M:SKStudios.Common.Rendering.RenderStateUnwinder.RestoreSnapshot(System.Int32)">
+            <summary>
+                Restores the snapshot at a given depth
+            </summary>
+            <param name="depth">depth to restore</param>
+        </member>
+        <member name="M:SKStudios.Common.Rendering.RenderStateUnwinder.ClearAllEntries">
+            <summary>
+                Clears all the entries in the snapshot list
+            </summary>
+        </member>
+        <member name="T:SKStudios.Common.Rendering.RenderStateUnwinder.Node">
+            <summary>
+                Node containing state data for all materials in one depth snapshot
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Rendering.RenderStateUnwinder.Node.AddTextureEntry(UnityEngine.Renderer,UnityEngine.RenderTexture,System.Int32)">
+            <summary>
+                Add a material state to the frame snapshot
+            </summary>
+            <param name="rend">material to add</param>
+            <param name="rt">texture to add</param>
+            <param name="name">name of rt on the material</param>
+        </member>
+        <member name="M:SKStudios.Common.Rendering.RenderStateUnwinder.Node.AddVectorEntry(UnityEngine.Renderer,UnityEngine.Vector4,System.Int32)">
+            <summary>
+                Add a material state to the frame snapshot
+            </summary>
+            <param name="rend">material to add</param>
+            <param name="vec">Vector to add</param>
+            <param name="name">name of rt on the material</param>
+        </member>
+        <member name="M:SKStudios.Common.Rendering.RenderStateUnwinder.Node.AddFloatEntry(UnityEngine.Renderer,System.Single,System.Int32)">
+            <summary>
+                Add a material state to the frame snapshot
+            </summary>
+            <param name="rend">material to add</param>
+            <param name="val">Float to add</param>
+            <param name="name">name of rt on the material</param>
+        </member>
+        <member name="M:SKStudios.Common.Rendering.RenderStateUnwinder.Node.AddMatrixEntry(UnityEngine.Renderer,UnityEngine.Matrix4x4,System.Int32)">
+            <summary>
+                Add a material state to the frame snapshot
+            </summary>
+            <param name="rend">material to add</param>
+            <param name="val">Matrix to add</param>
+            <param name="name">name of rt on the material</param>
+        </member>
+        <member name="M:SKStudios.Common.Rendering.RenderStateUnwinder.Node.RestoreEntry">
+            <summary>
+                Restores all the materials to the state when this snapshot was created
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Rendering.RenderStateUnwinder.Node.ClearEntries">
+            <summary>
+                Clear all entries in the unwinder
+            </summary>
+        </member>
+    </members>
+</doc>

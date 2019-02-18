@@ -1,0 +1,389 @@
+fileFormatVersion: 2
+guid: 3a6735d3b55867742944f578ed1019d7
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: unityexport
+    100004: unityexport.001
+    100006: unityexport.002
+    100008: unityexport.003
+    100010: unityexport.004
+    100012: unityexport.005
+    100014: unityexport.006
+    100016: unityexport.007
+    100018: PhysWorld
+    100020: VisibleWorld
+    100022: DungeonPhys1
+    100024: DungeonPhys2
+    100026: DungeonPhys3
+    100028: DungeonRend1
+    100030: DungeonRend2
+    100032: DungeonRend3
+    100034: Cube
+    100036: Cube.001
+    100038: Cube.002
+    100040: Cube.003
+    100042: Cube.004
+    100044: DungeonRend1.000
+    100046: DungeonRend1.001
+    100048: DungeonRend2.000
+    100050: DungeonRend2.001
+    100052: DungeonRend3.000
+    100054: DungeonRend3.001
+    100056: PhysicsWorld
+    100058: Sun
+    100060: Sun.001
+    100062: Sun.002
+    100064: VisibleWorld.001
+    100066: Cube.013
+    100068: Hatch
+    100070: Player
+    100072: PlayerHead
+    100074: Hatch.001
+    100076: CollisionWorld
+    100078: DungeonRend1.002
+    100080: Sun.003
+    100082: Sun.004
+    100084: Sun.005
+    100086: DungeonRend2.002
+    100088: DungeonRend2.003
+    100090: DungeonRend2.004
+    100092: DungeonRend2.005
+    100094: DungeonRend2.006
+    100096: DungeonRend1Collision
+    100098: Base
+    100100: Bridge
+    100102: Bridge Collider
+    100104: Cowl
+    100106: DungeonRend1 Collider
+    100108: DungeonRend2 Collider
+    100110: DungeonRend3 Collider
+    100112: LightBLock
+    100114: Sun.000
+    100116: DungeonRend1 Collider.001
+    100118: DungeonRend1 Collider.002
+    100120: DungeonRend1 Collider.003
+    100122: DungeonRend1 Collider.004
+    100124: DarkBox
+    100126: DarkBoxCollider
+    100128: EndBox
+    100130: FinalRoomCollider
+    100132: OutsideWalls
+    100134: ExteriorFloor
+    400000: //RootNode
+    400002: unityexport
+    400004: unityexport.001
+    400006: unityexport.002
+    400008: unityexport.003
+    400010: unityexport.004
+    400012: unityexport.005
+    400014: unityexport.006
+    400016: unityexport.007
+    400018: PhysWorld
+    400020: VisibleWorld
+    400022: DungeonPhys1
+    400024: DungeonPhys2
+    400026: DungeonPhys3
+    400028: DungeonRend1
+    400030: DungeonRend2
+    400032: DungeonRend3
+    400034: Cube
+    400036: Cube.001
+    400038: Cube.002
+    400040: Cube.003
+    400042: Cube.004
+    400044: DungeonRend1.000
+    400046: DungeonRend1.001
+    400048: DungeonRend2.000
+    400050: DungeonRend2.001
+    400052: DungeonRend3.000
+    400054: DungeonRend3.001
+    400056: PhysicsWorld
+    400058: Sun
+    400060: Sun.001
+    400062: Sun.002
+    400064: VisibleWorld.001
+    400066: Cube.013
+    400068: Hatch
+    400070: Player
+    400072: PlayerHead
+    400074: Hatch.001
+    400076: CollisionWorld
+    400078: DungeonRend1.002
+    400080: Sun.003
+    400082: Sun.004
+    400084: Sun.005
+    400086: DungeonRend2.002
+    400088: DungeonRend2.003
+    400090: DungeonRend2.004
+    400092: DungeonRend2.005
+    400094: DungeonRend2.006
+    400096: DungeonRend1Collision
+    400098: Base
+    400100: Bridge
+    400102: Bridge Collider
+    400104: Cowl
+    400106: DungeonRend1 Collider
+    400108: DungeonRend2 Collider
+    400110: DungeonRend3 Collider
+    400112: LightBLock
+    400114: Sun.000
+    400116: DungeonRend1 Collider.001
+    400118: DungeonRend1 Collider.002
+    400120: DungeonRend1 Collider.003
+    400122: DungeonRend1 Collider.004
+    400124: DarkBox
+    400126: DarkBoxCollider
+    400128: EndBox
+    400130: FinalRoomCollider
+    400132: OutsideWalls
+    400134: ExteriorFloor
+    2300000: unityexport
+    2300002: unityexport.001
+    2300004: unityexport.002
+    2300006: unityexport.003
+    2300008: unityexport.004
+    2300010: unityexport.005
+    2300012: unityexport.006
+    2300014: unityexport.007
+    2300016: DungeonPhys1
+    2300018: DungeonPhys2
+    2300020: DungeonPhys3
+    2300022: DungeonRend1
+    2300024: DungeonRend2
+    2300026: DungeonRend3
+    2300028: Cube
+    2300030: Cube.001
+    2300032: Cube.002
+    2300034: Cube.003
+    2300036: Cube.004
+    2300038: DungeonRend1.000
+    2300040: DungeonRend1.001
+    2300042: DungeonRend2.000
+    2300044: DungeonRend2.001
+    2300046: DungeonRend3.000
+    2300048: DungeonRend3.001
+    2300050: Cube.013
+    2300052: Hatch
+    2300054: Player
+    2300056: PlayerHead
+    2300058: Hatch.001
+    2300060: DungeonRend1.002
+    2300062: DungeonRend2.002
+    2300064: DungeonRend2.003
+    2300066: DungeonRend2.004
+    2300068: DungeonRend2.005
+    2300070: DungeonRend2.006
+    2300072: DungeonRend1Collision
+    2300074: Base
+    2300076: Bridge
+    2300078: Bridge Collider
+    2300080: Cowl
+    2300082: DungeonRend1 Collider
+    2300084: DungeonRend2 Collider
+    2300086: DungeonRend3 Collider
+    2300088: LightBLock
+    2300090: DungeonRend1 Collider.001
+    2300092: DungeonRend1 Collider.002
+    2300094: DungeonRend1 Collider.003
+    2300096: DungeonRend1 Collider.004
+    2300098: DarkBox
+    2300100: DarkBoxCollider
+    2300102: EndBox
+    2300104: FinalRoomCollider
+    2300106: OutsideWalls
+    2300108: ExteriorFloor
+    3300000: unityexport
+    3300002: unityexport.001
+    3300004: unityexport.002
+    3300006: unityexport.003
+    3300008: unityexport.004
+    3300010: unityexport.005
+    3300012: unityexport.006
+    3300014: unityexport.007
+    3300016: DungeonPhys1
+    3300018: DungeonPhys2
+    3300020: DungeonPhys3
+    3300022: DungeonRend1
+    3300024: DungeonRend2
+    3300026: DungeonRend3
+    3300028: Cube
+    3300030: Cube.001
+    3300032: Cube.002
+    3300034: Cube.003
+    3300036: Cube.004
+    3300038: DungeonRend1.000
+    3300040: DungeonRend1.001
+    3300042: DungeonRend2.000
+    3300044: DungeonRend2.001
+    3300046: DungeonRend3.000
+    3300048: DungeonRend3.001
+    3300050: Cube.013
+    3300052: Hatch
+    3300054: Player
+    3300056: PlayerHead
+    3300058: Hatch.001
+    3300060: DungeonRend1.002
+    3300062: DungeonRend2.002
+    3300064: DungeonRend2.003
+    3300066: DungeonRend2.004
+    3300068: DungeonRend2.005
+    3300070: DungeonRend2.006
+    3300072: DungeonRend1Collision
+    3300074: Base
+    3300076: Bridge
+    3300078: Bridge Collider
+    3300080: Cowl
+    3300082: DungeonRend1 Collider
+    3300084: DungeonRend2 Collider
+    3300086: DungeonRend3 Collider
+    3300088: LightBLock
+    3300090: DungeonRend1 Collider.001
+    3300092: DungeonRend1 Collider.002
+    3300094: DungeonRend1 Collider.003
+    3300096: DungeonRend1 Collider.004
+    3300098: DarkBox
+    3300100: DarkBoxCollider
+    3300102: EndBox
+    3300104: FinalRoomCollider
+    3300106: OutsideWalls
+    3300108: ExteriorFloor
+    4300000: unityexport.002
+    4300002: unityexport.001
+    4300004: unityexport
+    4300006: unityexport.003
+    4300008: unityexport.004
+    4300010: unityexport.005
+    4300012: unityexport.006
+    4300014: unityexport.007
+    4300016: DungeonPhys1
+    4300018: DungeonPhys2
+    4300020: DungeonPhys3
+    4300022: DungeonRend1
+    4300024: DungeonRend2
+    4300026: DungeonRend3
+    4300028: Cube
+    4300030: DungeonRend3.001
+    4300032: DungeonRend2.001
+    4300034: DungeonRend1.001
+    4300036: DungeonRend1.000
+    4300038: DungeonRend2.000
+    4300040: DungeonRend3.000
+    4300042: Cube.001
+    4300044: Cube.002
+    4300046: Cube.003
+    4300048: Cube.004
+    4300050: Cube.013
+    4300052: Player
+    4300054: Hatch
+    4300056: PlayerHead
+    4300058: Hatch.001
+    4300060: DungeonRend1.002
+    4300062: DungeonRend2.002
+    4300064: DungeonRend2.003
+    4300066: DungeonRend2.004
+    4300068: DungeonRend2.006
+    4300070: DungeonRend2.005
+    4300072: DungeonRend1Collision
+    4300074: LightBLock
+    4300076: Cowl
+    4300078: Base
+    4300080: Bridge
+    4300082: DungeonRend2 Collider
+    4300084: Bridge Collider
+    4300086: DungeonRend1 Collider
+    4300088: DungeonRend3 Collider
+    4300090: DungeonRend1 Collider.004
+    4300092: DungeonRend1 Collider.003
+    4300094: DungeonRend1 Collider.002
+    4300096: DungeonRend1 Collider.001
+    4300098: EndBox
+    4300100: DarkBox
+    4300102: FinalRoomCollider
+    4300104: DarkBoxCollider
+    4300106: OutsideWalls
+    4300108: ExteriorFloor
+    6400000: unityexport
+    6400002: unityexport.001
+    6400004: unityexport.002
+    6400006: unityexport.003
+    6400008: unityexport.004
+    6400010: unityexport.005
+    6400012: unityexport.006
+    6400014: unityexport.007
+    6400016: DungeonPhys1
+    6400018: DungeonPhys2
+    6400020: DungeonPhys3
+    6400022: DungeonRend1
+    6400024: DungeonRend2
+    6400026: DungeonRend3
+    2186277476908879412: ImportLogs
+  materials:
+    importMaterials: 0
+    materialName: 1
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15
+    secondaryUVHardAngle: 90
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

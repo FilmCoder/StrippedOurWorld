@@ -1,0 +1,1412 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SK_Common</name>
+    </assembly>
+    <members>
+        <member name="T:SKStudios.Common.Bounds2D">
+            <summary>
+                2D bounds struct, optimized for speed
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Bounds2D._bounds">
+            <summary>
+                Backing field
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Bounds2D.Center">
+            <summary>
+                Center of the bounds
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Bounds2D.Size">
+            <summary>
+                Size of the bounds
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Bounds2D.GetUnbounded">
+            <summary>
+                Get bounds with no center or dimension defined. When the first
+                point is encapsulated, it will become a bounding box at that position
+                with a size of zero.
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Bounds2D.#ctor(UnityEngine.Vector2,UnityEngine.Vector2)">
+            <summary>
+                Create a new bounds with the given center and size (size is halfsize)
+            </summary>
+            <param name="center">Center of the bounds</param>
+            <param name="size">Size of the bounds</param>
+        </member>
+        <member name="M:SKStudios.Common.Bounds2D.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                Creates a new Bounds2D with the given bounding values
+            </summary>
+            <param name="minx">miny</param>
+            <param name="maxx">maxx</param>
+            <param name="miny">miny</param>
+            <param name="maxy">maxy</param>
+        </member>
+        <member name="M:SKStudios.Common.Bounds2D.Encapsulate(UnityEngine.Vector2)">
+            <summary>
+                Encapsulate a given point
+            </summary>
+            <param name="point">Point to encapsulate</param>
+        </member>
+        <member name="M:SKStudios.Common.Bounds2D.GetRect">
+            <summary>
+                Get a rect representing this bounds
+            </summary>
+            <returns>Representative rect</returns>
+        </member>
+        <member name="P:SKStudios.Common.Bounds2D.MinX">
+            <summary>
+                Min X
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Bounds2D.MaxX">
+            <summary>
+                Max X
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Bounds2D.MinY">
+            <summary>
+                Min Y
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Bounds2D.MaxY">
+            <summary>
+                Max Y
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Extensions.ComponentExtensions.CloneFrom``1(``0,``0)">
+            <summary>
+                Using reflection, attempts to copy all attributes of a given <see cref="T:UnityEngine.Component" /> into the component the method
+                is called
+                upon.
+            </summary>
+            <typeparam name="T">The type of the component</typeparam>
+            <param name="comp">The original component</param>
+            <param name="other">The component to copy</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Extensions.ComponentExtensions.AddComponentClone``1(UnityEngine.GameObject,``0)">
+            <summary>
+                Add a new <see cref="T:UnityEngine.Component" /> which clones another <see cref="T:UnityEngine.Component" />
+            </summary>
+            <typeparam name="T">Type of component</typeparam>
+            <param name="obj">object to add to</param>
+            <param name="toClone">component to clone</param>
+            <returns></returns>
+        </member>
+        <member name="T:SKStudios.Common.Extensions.UnityExtensions">
+            <summary>
+                Extends Unity functionality
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Extensions.UnityExtensions.SetLayerRecursively(UnityEngine.GameObject,System.Int32)">
+            <summary>
+                Sets the layer of the object, as well as the layers of its children
+            </summary>
+            <param name="obj">The object to set</param>
+            <param name="layer">The layer to set</param>
+        </member>
+        <member name="M:SKStudios.Common.Extensions.UnityExtensions.SetTagRecursively(UnityEngine.GameObject,System.String)">
+            <summary>
+                Sets the tag of the object, as well as the tags of its children
+            </summary>
+            <param name="obj">The object to set</param>
+            <param name="tag">The tag to set</param>
+        </member>
+        <member name="M:SKStudios.Common.Extensions.UnityExtensions.GetPath(UnityEngine.Transform,UnityEngine.Transform)">
+            <summary>
+                Returns the path of the gameobject in the form of object/child1/child2/...etc, starting from the transform the
+                method is called upon. Does not cap with a final /.
+            </summary>
+            <param name="current">The transform to start on</param>
+            <param name="goal">The transform to find</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Extensions.UnityExtensions.FitRect(UnityEngine.Rect,UnityEngine.Rect)">
+            <summary>
+                Normalizes a rect to fit within a second rect
+            </summary>
+            <param name="rectIn"></param>
+            <param name="bounds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Extensions.UnityExtensions.CheapDistance(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>
+                Returns the Manhattan Distance of two points. Always accurate when comparing which is farther, always overshoots.
+            </summary>
+            <param name="value">First point</param>
+            <param name="other">Second point</param>
+            <returns></returns>
+        </member>
+        <member name="T:SKStudios.Common.Extensions.VectorExtensions">
+            <summary>
+                Extends Unity's Vector classes
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Extensions.VectorExtensions.ManhattanDistance(UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>
+                Returns the Manhattan Distance of two points. Always accurate when comparing which is farther, always overshoots.
+            </summary>
+            <param name="value">First point</param>
+            <param name="other">Second point</param>
+            <returns></returns>
+        </member>
+        <member name="T:SKStudios.Common.Extensions.SKComponentCache">
+            <summary>
+                Class that contains convenience methods for optimizing getcomponent lookups on hotpaths
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Extensions.SKComponentCache.GetCompDictionary``1">
+            <summary>
+                Gets the backing dictionary that tracks components of the given type. If it does not exist, it is
+                created.
+            </summary>
+            <typeparam name="T">Component type of dictionary to find</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Extensions.SKComponentCache.SKGetComponentOnce``1(UnityEngine.GameObject)">
+            <summary>
+                Attempts to get a component one single time; if it is not found the first time, skips
+                check and returns null immediately on all subsequent calls. Assumes that the component
+                being checked will never be added after the first check.
+            </summary>
+            <typeparam name="T">Type of the component to add</typeparam>
+            <param name="gameObject">GameObject to target</param>
+            <returns>Component if found, null otherwise</returns>
+        </member>
+        <member name="M:SKStudios.Common.Extensions.SKComponentCache.SKGetComponent``1(UnityEngine.GameObject)">
+            <summary>
+                Gets a component, grabs it from a Dictionary if it has been found
+                previously. In unity versions > 5.5, this no longer offers performance
+                benefits over GameObject.GetComponent.
+            </summary>
+            <typeparam name="T">Type of the component to get</typeparam>
+            <param name="gameObject">GameObject to target</param>
+            <returns>Component if found, null otherwise</returns>
+        </member>
+        <member name="T:SKStudios.Common.Debug.SKOrgType">
+            <summary>
+                Type of Org to attribute the Log to
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Debug.SKOrgType.SKS">
+            <summary>
+                SKStudios
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Debug.SKOrgType.PortalKit">
+            <summary>
+                The PortalKitPro Asset
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Debug.SKOrgType.MirrorKit">
+            <summary>
+                The MirrorKitPro Asset
+            </summary>
+        </member>
+        <member name="T:SKStudios.Common.Debug.SKLogger">
+            <summary>
+                Little helper class containing colored bits of text for logging and menus related to products
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Debug.SKLogger.Log(System.String,SKStudios.Common.Debug.SKOrgType)">
+            <summary>
+                Log with a prefix based on <paramref name="orgType" />
+            </summary>
+            <param name="message">Message to log</param>
+            <param name="orgType">org type</param>
+        </member>
+        <member name="M:SKStudios.Common.Debug.SKLogger.LogWarning(System.String,SKStudios.Common.Debug.SKOrgType)">
+            <summary>
+                Log with a prefix based on <paramref name="orgType" />
+            </summary>
+            <param name="message">Message to log</param>
+            <param name="orgType">org type</param>
+        </member>
+        <member name="M:SKStudios.Common.Debug.SKLogger.LogError(System.String,SKStudios.Common.Debug.SKOrgType)">
+            <summary>
+                Log with a prefix based on <paramref name="orgType" />
+            </summary>
+            <param name="message">Message to log</param>
+            <param name="orgType">org type</param>
+        </member>
+        <member name="T:SKStudios.Common.Utils.MatrixUtils">
+            <summary>
+                Class containing <see cref="T:UnityEngine.Matrix4x4" /> utilities
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.MatrixUtils.Unscaled(UnityEngine.Matrix4x4)">
+            <summary>
+                Strip the scale component from a given transform <see cref="T:UnityEngine.Matrix4x4" />
+            </summary>
+            <param name="mat">Matrix to un-scale</param>
+            <returns>Unscaled matrix</returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.MatrixUtils.GetScale(UnityEngine.Matrix4x4)">
+            <summary>
+                Extract the scale component from a given transform <see cref="T:UnityEngine.Matrix4x4" />
+            </summary>
+            <param name="mat">Matrix to measure</param>
+            <returns>scale</returns>
+        </member>
+        <member name="T:SKStudios.Common.Utils.MeshCache">
+            <summary>
+                Class that contains cached verts for meshes to avoid
+                garbage collection overhead and unnecessary copies.
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.MeshCache.GetSimplifiedMesh(UnityEngine.Mesh@)">
+            <summary>
+                Return a simplified version of a mesh
+            </summary>
+            <param name="mesh">Mesh to simplify</param>
+            <returns>The vertices that constitute the simplified mesh</returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.MeshCache.GenerateMesh(UnityEngine.Mesh@)">
+            <summary>
+                Generates a simplified mesh given a MeshRenderer. This
+                could inarguably be more performant, but it's only used
+                on instantiation time so unless it's a problem, whatever.
+                <param name="mesh">Mesh to generate a reduced version of</param>
+            </summary>
+        </member>
+        <member name="T:SKStudios.Common.Utils.SimplifiedMeshCache">
+            <summary>
+                Class that contains simplified (duplicate verts removed) versions of the meshes associated with mesh
+                renderers for the purpose of rendering effect cams
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.SimplifiedMeshCache.GenerateMesh(UnityEngine.Mesh@)">
+            <summary>
+                Generates a simplified mesh given a MeshRenderer. This
+                could inarguably be more performant, but it's only used
+                on instantiation time so unless it's a problem, whatever.
+                <param name="mesh">Mesh to generate a reduced version of</param>
+            </summary>
+        </member>
+        <member name="T:SKStudios.Common.Utils.CameraUtils">
+            <summary>
+                Class containing convenience utilities for Cameras
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.CameraUtils.NearClipEpsilon(UnityEngine.Camera)">
+            <summary>
+                Returns the near clip of the camera + a small epsilon value. Centralizing this
+                so that the epsilon isn't a repeated magic number.
+            </summary>
+            <param name="camera">Camera to measure the clip plane of</param>
+            <returns>the clip plane + epsilon</returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.CameraUtils.GetCameraPositionData(UnityEngine.Camera,UnityEngine.Vector3@,UnityEngine.Vector3@)">
+            <summary>
+                Get the position and forward vector of a camera utilizing its WorldToCamera matrix
+            </summary>
+            <param name="cam">Camera</param>
+            <param name="position">Position of camera</param>
+            <param name="forward">Forward vector of camera</param>
+        </member>
+        <member name="M:SKStudios.Common.Utils.CameraUtils.WorldToCameraPlane(UnityEngine.Camera,UnityEngine.Vector3,System.Boolean@)">
+            <summary>
+                Move a position from world space up to the camera plane. Assumes that the camera's
+                view matrix is not being driven directly from code.
+            </summary>
+            <param name="camera">Camera</param>
+            <param name="worldPos">Worldspace position to move</param>
+            <param name="behind">Was the point behind the camera?</param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:SKStudios.Common.Utils.CameraUtils.WorldToCameraPlane(UnityEngine.Camera,UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3,System.Boolean@)" -->
+        <member name="M:SKStudios.Common.Utils.LazyAssetLoader.GetAsset``1(System.String)">
+            <summary>
+                Return the asset of type T at a given path. Returns null if the object
+                is not loaded, is currently loading, or cannot be found.
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="path">Path</param>
+            <returns>Resource</returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.LazyAssetLoader.LoadAsset``1(System.String,System.Collections.Generic.Dictionary{System.String,UnityEngine.Object},Eppy.EppyTuple{System.Type,System.String})">
+            <summary>
+                Coroutine to load an asset of a given type at a given path.
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Utils.ConsoleCallbackHandler.Instance">
+            <summary>
+                The listener for the events must be an instance
+                to be reliably called in play mode
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Utils.ConsoleCallbackHandler._callbacks">
+            <summary>
+                Dictionary containing all active callbacks. TODO: Make serializable
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.ConsoleCallbackHandler.AddCallback(System.Action,UnityEngine.LogType,System.String)">
+            <summary>
+                Add a callback to a specified type of Unity Console log.
+            </summary>
+            <param name="action">Action to execute on message written</param>
+            <param name="type">Type of callback</param>
+            <param name="message">Message of callback</param>
+        </member>
+        <member name="M:SKStudios.Common.Utils.ConsoleCallbackHandler.RemoveCallback(UnityEngine.LogType,System.String)">
+            <summary>
+                Remove a specified callback
+            </summary>
+            <param name="type">Type of callback</param>
+            <param name="message">Message substring to search for</param>
+        </member>
+        <member name="M:SKStudios.Common.Utils.ConsoleCallbackHandler.ClearCallbacks">
+            <summary>
+                Clear all callbacks on Unity Console logs
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.ConsoleCallbackHandler.HandleLog(System.String,System.String,UnityEngine.LogType)">
+            <summary>
+                Handles logs sent out by Unity's console
+            </summary>
+            <param name="logString">String logged</param>
+            <param name="stackTrace">Stacktrace associated with message</param>
+            <param name="type">Type of message</param>
+        </member>
+        <member name="T:SKStudios.Common.Utils.ConsoleCallbackHandler.ConsoleCallback">
+            <summary>
+                Handles a callback for a given LogType + Message. All actions for that given LogType
+                and message combination are stored in a single ConsoleCallback instance to reduce
+                editor speed reduction should a large amount of ConsoleCallbacks be used.
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.ConsoleCallbackHandler.ConsoleCallback.AddAction(System.Action)">
+            <summary>
+                Add an action to this Callback
+            </summary>
+            <param name="a">the action to add</param>
+        </member>
+        <member name="M:SKStudios.Common.Utils.ConsoleCallbackHandler.ConsoleCallback.ExecuteActions">
+            <summary>
+                Execute all actions on this callback
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.ConsoleCallbackHandler.ConsoleCallback.GetHashCode">
+            <summary>
+                HashCode implemented in a way to return equality if the target to check is the same
+            </summary>
+            <returns>HashCode of the target</returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.ConsoleCallbackHandler.ConsoleCallback.Equals(System.Object)">
+            <summary>
+                Equality checks only for HashCode, assuming that the other obj is of the right type and exists
+            </summary>
+            <param name="obj">Other Object</param>
+            <returns></returns>
+        </member>
+        <member name="T:SKStudios.Common.Utils.SafeRemoveComponent.Dependencies">
+            <summary>
+                Tracks all dependencies for requirecomponents
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Utils.SafeRemoveComponent.Dependencies.DependencyGraph">
+            <summary>
+                Graph of all components to what they are dependant on
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.SafeRemoveComponent.Dependencies.RescanDictionary">
+            <summary>
+                Rescan for dependencies to rebuild the dictionary
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.SafeRemoveComponent.Dependencies.RefreshDict">
+            <summary>
+                Refresh the dictionary
+            </summary>
+        </member>
+        <member name="T:SKStudios.Common.Utils.Pair`2">
+            <summary>
+                TWO THING- STACK ALLOCATED EDITION
+            </summary>
+            <typeparam name="T">ONE</typeparam>
+            <typeparam name="TT">DOS</typeparam>
+        </member>
+        <member name="T:SKStudios.Common.Utils.SKSGeneralUtils">
+            <summary>
+                General Utilities from SKStudios
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.SKSGeneralUtils.SafeDestroyComponent(UnityEngine.Component)">
+            <summary>
+                Using a pregenerated reflective dependance container class, recursively delete component and components that
+                require it
+            </summary>
+            <returns>
+                Component to destroy. If <paramref name="comp" /> is null, returns true.
+            </returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.SKSGeneralUtils.FindAnalogousTransform(UnityEngine.Transform,UnityEngine.Transform,UnityEngine.Transform,System.Boolean)">
+            <summary>
+                Finds a transform equal in position to itself, on another game object with the same transform structure
+            </summary>
+            <param name="t">The transform to find</param>
+            <param name="root">The root of this transform's structure</param>
+            <param name="otherRoot">The root of the otherRoot transform's structure</param>
+            <param name="findingParent">Is the search to find a parent transform?</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.SKSGeneralUtils.ApplyHideFlagsRecursive(UnityEngine.GameObject,UnityEngine.HideFlags)">
+            <summary>
+                Recursively apply hide flags to this GameObject and all of its children. Adds, does not replace.
+            </summary>
+            <param name="target">GameObject to target</param>
+            <param name="flags">Flags to apply</param>
+        </member>
+        <member name="M:SKStudios.Common.Utils.SKSGeneralUtils.RemoveHideFlagsRecursive(UnityEngine.GameObject,UnityEngine.HideFlags)">
+            <summary>
+                Recursively remove hide flags to this GameObject and all of its children
+            </summary>
+            <param name="target">GameObject to target</param>
+            <param name="flags">Flags to apply</param>
+        </member>
+        <member name="M:SKStudios.Common.Utils.SKSGeneralUtils.BackCheckVerts(UnityEngine.Mesh,System.Boolean)">
+            <summary>
+                Returns an array of vertices which can be used for approximate calculations for a 3d flat mesh.
+            </summary>
+            <param name="refMesh">Mesh to reference</param>
+            <returns>Vert to use in the BackCheck algorithm</returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.SKSGeneralUtils.IsBehind(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>
+                Checks if a point is behind a vector, facing in a direction.
+            </summary>
+            <param name="v">Point to check</param>
+            <param name="root">Point to check against</param>
+            <param name="forward">Forward vector of root</param>
+            <returns></returns>
+        </member>
+        <member name="T:SKStudios.Common.Utils.Keywords">
+            <summary>
+                Class containing constant "Keyword" related values- "Keywords" are constant string
+                values that are used to refer to Unity and Game constant values. Many of them can
+                have their use optimized by only evaluating the string once. Where applicable, this
+                is performed.
+                todo:TBH the interation concept is quite shite at the moment so please bear with me on that
+            </summary>
+        </member>
+        <member name="T:SKStudios.Common.Utils.Keywords.KeywordBlock`2">
+            <summary>
+                Block containing globally-referenced properties derived from strings
+            </summary>
+            <typeparam name="T">
+                Type contained. Each property block may only have ONE type
+                that will get returned when AllValues() is called. Other types will be ignored.
+            </typeparam>
+            <typeparam name="TT">This type</typeparam>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Keywords.KeywordBlock`2.AllValues">
+            <summary>
+                Return an array of all layers used by this assembly
+            </summary>
+            <returns>Array containing all values in this block</returns>
+        </member>
+        <member name="T:SKStudios.Common.Utils.Keywords.ShaderKeys">
+            <summary>
+                Block containing shader IDs
+            </summary>
+        </member>
+        <member name="T:SKStudios.Common.Utils.Keywords.Layers">
+            <summary>
+                Block containing Layer IDs
+            </summary>
+        </member>
+        <member name="T:SKStudios.Common.Utils.Keywords.Tags">
+            <summary>
+                Block containing tags
+            </summary>
+        </member>
+        <member name="T:SKStudios.Common.Utils.Mathfx">
+            <summary>
+                Class for math-based effects
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.Hermite(System.Single,System.Single,System.Single)">
+            <summary>
+                Hermite
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.Hermite(UnityEngine.Vector2,UnityEngine.Vector2,System.Single)">
+            <summary>
+                Ease in out
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.Hermite(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)">
+            <summary>
+                Ease in out
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.Sinerp(System.Single,System.Single,System.Single)">
+            <summary>
+                Ease out
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.Sinerp(UnityEngine.Vector2,UnityEngine.Vector2,System.Single)">
+            <summary>
+                Ease out
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.Sinerp(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)">
+            <summary>
+                Ease out
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.Coserp(System.Single,System.Single,System.Single)">
+            <summary>
+                Ease in
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.Coserp(UnityEngine.Vector2,UnityEngine.Vector2,System.Single)">
+            <summary>
+                Ease in
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.Coserp(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)">
+            <summary>
+                Ease in
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.Berp(System.Single,System.Single,System.Single)">
+            <summary>
+                Boing
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.Berp(UnityEngine.Vector2,UnityEngine.Vector2,System.Single)">
+            <summary>
+                Boing
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.Berp(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)">
+            <summary>
+                Boing
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.SmoothStep(System.Single,System.Single,System.Single)">
+            <summary>
+                Like lerp with ease in ease out
+            </summary>
+            <param name="x"></param>
+            <param name="min"></param>
+            <param name="max"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.SmoothStep(UnityEngine.Vector2,System.Single,System.Single)">
+            <summary>
+                Like lerp with ease in ease out
+            </summary>
+            <param name="vec"></param>
+            <param name="min"></param>
+            <param name="max"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.SmoothStep(UnityEngine.Vector3,System.Single,System.Single)">
+            <summary>
+                Like lerp with ease in ease out
+            </summary>
+            <param name="vec"></param>
+            <param name="min"></param>
+            <param name="max"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.Lerp(System.Single,System.Single,System.Single)">
+            <summary>
+                Like lerp with ease in ease out
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.NearestPoint(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>
+                Get the nearest point
+            </summary>
+            <param name="lineStart"></param>
+            <param name="lineEnd"></param>
+            <param name="point"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.NearestPointStrict(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>
+                Get the nearest point
+            </summary>
+            <param name="lineStart"></param>
+            <param name="lineEnd"></param>
+            <param name="point"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.Bounce(System.Single)">
+            <summary>
+                Bounce
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.Bounce(UnityEngine.Vector2)">
+            <summary>
+                Bounce
+            </summary>
+            <param name="vec"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.Bounce(UnityEngine.Vector3)">
+            <summary>
+                Bounce
+            </summary>
+            <param name="vec"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.Approx(System.Single,System.Single,System.Single)">
+            <summary>
+                test for value that is near specified float (due to floating point inprecision)
+                all thanks to Opless for this!
+            </summary>
+            <param name="val"></param>
+            <param name="about"></param>
+            <param name="range"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.Approx(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)">
+            <summary>
+                test if a Vector3 is close to another Vector3 (due to floating point inprecision)
+                compares the square of the distance to the square of the range as this
+                avoids calculating a square root which is much slower than squaring the range
+            </summary>
+            <param name="val"></param>
+            <param name="about"></param>
+            <param name="range"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Mathfx.Clerp(System.Single,System.Single,System.Single)">
+            <summary>
+                CLerp - Circular Lerp - is like lerp but handles the wraparound from 0 to 360.
+                This is useful when interpolating eulerAngles and the object
+                crosses the 0/360 boundary.The standard Lerp function causes the object
+                to rotate in the wrong direction and looks stupid.Clerp fixes that.
+            </summary>
+            <param name="start"></param>
+            <param name="end"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SKStudios.Common.Utils.MirrorTransformUtils">
+            <summary>
+                Helper class containing some functions useful for Mirror calculations
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.MirrorTransformUtils.MirrorMoveTransform(UnityEngine.Transform)">
+            <summary>
+                Offset a Transform along Mirror rules
+            </summary>
+            <param name="transform">Transform to move</param>
+        </member>
+        <member name="M:SKStudios.Common.Utils.MirrorTransformUtils.MirrorRotate(UnityEngine.Quaternion)">
+            <summary>
+                Rotate a camera along Mirror rules
+            </summary>
+            <param name="quat">Quat to rotate</param>
+        </member>
+        <member name="T:SKStudios.Common.Utils.PlaneUtilities">
+            <summary>
+                Utilities for plane-related math
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.PlaneUtilities.ProjectPointOnPlane(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.Vector3)">
+            <summary>
+                Project a point to a plane
+            </summary>
+            <param name="planeNormal">Normal of plane</param>
+            <param name="planePoint">Point of plane</param>
+            <param name="point">Point to project</param>
+            <returns>Projected point</returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.PlaneUtilities.VertsToPlane(UnityEngine.Vector3[])">
+            <summary>
+                Go from the verts of a planar mesh to the plane that roughly defines that mesh.
+            </summary>
+            <param name="verts">Vertices of the mesh</param>
+            <returns>The plane in the same locality as the points</returns>
+        </member>
+        <member name="T:SKStudios.Common.Utils.PrimitiveHelper">
+            <summary>
+                Credit to Octopoid
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.PrimitiveHelper.CreatePrimitive(UnityEngine.PrimitiveType,System.Boolean)">
+            <summary>
+                Create a primitive of PrimitiveType type
+            </summary>
+            <param name="type"></param>
+            <param name="withCollider"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.PrimitiveHelper.GetPrimitiveMesh(UnityEngine.PrimitiveType)">
+            <summary>
+                Get a primitive mesh of PrimitiveType
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SKStudios.Common.Utils.ReflectionUtils">
+            <summary>
+                SKStudios utils for reflection
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.ReflectionUtils.GetEnumerableOfType``1(System.Reflection.Assembly)">
+            <summary>
+                Used to obtain an enumerable of all objects that inherit from a given class. Used for Doppleganger dependancy
+                detection.
+            </summary>
+            <typeparam name="T">Type to check</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.ReflectionUtils.DependanciesOf(System.Type)">
+            <summary>
+                Returns the [RequiredComponent] annotations of a given type in the form of a list.
+            </summary>
+            <param name="type">The type to check</param>
+            <returns>a list of all RequiredComponents for this Type</returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.ReflectionUtils.GetRequiredComponents(System.String@)">
+            <summary>
+                Returns a dictionary containing they keys of all components that are marked by a [RequireComponent]
+                annotation in another class, with the values being said classes. Also returns human-readable report string.
+            </summary>
+            <param name="report"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.ReflectionUtils.GetRequiredComponents">
+            <summary>
+                Returns a dictionary containing they keys of all components that are marked by a [RequireComponent]
+                annotation in another class, with the values being said classes.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:SKStudios.Common.Utils.Reflection.GetVarInfoFast.VariableCache">
+            <summary>
+                Stores all of the properties and fields associated with a type
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.Reflection.GetVarInfoFast.GetVariableInfos(System.Type)">
+            <summary>
+                Get all Field and Property information associated with a given type
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SKStudios.Common.Utils.ShallowCopyFast">
+            <summary>
+                Class allowing for (decently) fast shallow copying using reflection.
+                Should not be used in hotpaths, as SetField/SetProperty are still
+                used, but the expensive reflection is cached so it's not too deadly.
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.ShallowCopyFast.CopyAll``1(``0,``0)">
+            <summary>
+                Copy all properties and fields from one object to another, caching
+                properties and fields for performance purposes
+            </summary>
+            <typeparam name="T">Type to copy</typeparam>
+            <param name="source">Source to copy from</param>
+            <param name="target">Destination to copy to</param>
+        </member>
+        <member name="T:SKStudios.Common.Utils.SerializeDict">
+            <summary>
+                Serialize dictionary to binary
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.SerializeDict.Serialize``1(``0,System.IO.Stream)">
+            <summary>
+                Serialize a given dict
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="dictionary"></param>
+            <param name="stream"></param>
+        </member>
+        <member name="M:SKStudios.Common.Utils.SerializeDict.Deserialize``1(System.IO.Stream)">
+            <summary>
+                Deserialize a dictionary
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Utils.SerializeDict.CreateInstance``1">
+            <summary>
+                Create an instnace of an object
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:SKStudios.Common.Utils.BestSupportedSettings">
+            <summary>
+                Class pointing to the best settings supported on a given platform for SKS custom renderers
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Utils.BestSupportedSettings.BestLinearFormat">
+            <summary>
+                Grabs the best supported linear <see cref="T:UnityEngine.RenderTexture" /> format.
+            </summary>
+        </member>
+        <member name="T:SKStudios.Common.Utils.SkyboxGrabber">
+            <summary>
+                Class that grabs skybox for the purposes of correcting rendering through <see cref="!:SKEffectRenderer" />s.
+            </summary>
+        </member>
+        <member name="T:SKStudios.Common.Utils.SkyboxGrabber.GrabberMode">
+            <summary>
+                Mode that the grabber is using. If the skybox of the scene is six-sided,
+                no extra memory needs to be allocated.
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Utils.SkyboxGrabber.GrabberMode.SixSided">
+            <summary>
+                Six Sided Skybox
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Utils.SkyboxGrabber.GrabberMode.Unsupported">
+            <summary>
+                Non Six-sided Skybox
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Utils.SkyboxGrabber.SidesInCube">
+            <summary>
+                Sides in a cube
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Utils.SkyboxGrabber.DefaultScale">
+            <summary>
+                Default scale of the replacement <see cref="T:UnityEngine.Skybox" /> <see cref="T:UnityEngine.Mesh" />.
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Utils.SkyboxGrabber.RetryTime">
+            <summary>
+                The time to wait (in ms) before retrying if <see cref="P:UnityEngine.RenderSettings.skybox" /> is null when attempting to grab
+                it.
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Utils.SkyboxGrabber.RetryNumber">
+            <summary>
+                The number of times that <see cref="F:SKStudios.Common.Utils.SkyboxGrabber._retryThread" /> will try again after failing.
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Utils.SkyboxGrabber.FaceMaterialIDs">
+            <summary>
+                Shader IDs for face textures
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Utils.SkyboxGrabber.Faces">
+            <summary>
+                Cubemap face enum array
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Utils.SkyboxGrabber.FaceIndexMap">
+            <summary>
+                Corrective remap array
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.SkyboxGrabber.#ctor(System.Int32)">
+            <summary>
+                Default constructor.
+            </summary>
+            <param name="resolution">Resolution of the <see cref="T:UnityEngine.Cubemap" /> to render.</param>
+        </member>
+        <member name="P:SKStudios.Common.Utils.SkyboxGrabber.Instance">
+            <summary>
+                Main instance of the <see cref="T:SKStudios.Common.Utils.SkyboxGrabber" />
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Utils.SkyboxGrabber.Resolution">
+            <summary>
+                Changing this will cause the skybox textures to be regenerated if
+                the <see cref="F:SKStudios.Common.Utils.SkyboxGrabber._mode" /> of this <see cref="T:SKStudios.Common.Utils.SkyboxGrabber" /> is set to <see cref="F:SKStudios.Common.Utils.SkyboxGrabber.GrabberMode.Unsupported" />
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Utils.SkyboxGrabber.Mode">
+            <summary>
+                Mode of the <see cref="T:SKStudios.Common.Utils.SkyboxGrabber" />.
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.SkyboxGrabber.Dispose">
+            <summary>
+                Dispose of this grabber.
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.SkyboxGrabber.UpdateSkyboxForCamera(UnityEngine.Camera)">
+            <summary>
+                Update the skybox for a given camera.
+            </summary>
+            <param name="renderingCamera">Camera to update</param>
+        </member>
+        <member name="M:SKStudios.Common.Utils.SkyboxGrabber.RipSkybox">
+            <summary>
+                Scan the skybox and turn it into a single texture
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.SkyboxGrabber.RipSkybox(UnityEngine.SceneManagement.Scene,UnityEngine.SceneManagement.Scene)">
+            <summary>
+                Scan the skybox and turn it into a single texture
+            </summary>
+            <param name="oldScene"></param>
+            <param name="newScene"></param>
+        </member>
+        <member name="M:SKStudios.Common.Utils.SkyboxGrabber.RipSupportedSkybox">
+            <summary>
+                If the skybox is six-sided, nothing to do but dupe the material
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.SkyboxGrabber.RipUnsupportedSkybox">
+            <summary>
+                Rip skyboxes that can't be represented with a typical six-sided projection
+            </summary>
+        </member>
+        <member name="T:SKStudios.Common.Utils.UnityMainThreadDispatcher">
+            <summary>
+                Original Author: Pim de Witte (pimdewitte.com) and contributors
+                Heavily modified by SKStudios (TM).
+                A thread-safe class which holds a queue with actions to execute on the next Update() method. It can be used to make
+                calls to the main thread from a non-synced thread.
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Utils.UnityMainThreadDispatcher.Instance">
+            <summary>
+                Global Instance of the <see cref="T:SKStudios.Common.Utils.UnityMainThreadDispatcher" />.
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.UnityMainThreadDispatcher.Initialize">
+            <summary>
+                Grab or create an instnace as soon as the scene loads
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.UnityMainThreadDispatcher.GrabInstance">
+            <summary>
+                Finds or creates the <see cref="T:SKStudios.Common.Utils.UnityMainThreadDispatcher" />, and assigns it to <see cref="F:SKStudios.Common.Utils.UnityMainThreadDispatcher._instance" />
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.UnityMainThreadDispatcher.Enqueue(System.Action)">
+            <summary>
+                Locks the queue and adds the Action to the queue
+            </summary>
+            <param name="action">function that will be executed from the main thread.</param>
+        </member>
+        <member name="M:SKStudios.Common.Utils.UnityMainThreadDispatcher.Enqueue(System.Action,System.Action)">
+            <summary>
+                Locks the queue and adds the Action to the queue
+            </summary>
+            <param name="action">function that will be executed from the main thread.</param>
+            <param name="afterAction">Action to be invoked after <paramref name="action" /> has been called on the main thread.</param>
+        </member>
+        <member name="M:SKStudios.Common.Utils.UnityMainThreadDispatcher.Enqueue(SKStudios.Common.Utils.UnityMainThreadDispatcher.ActionWrapper)">
+            <summary>
+                Locks the queue and adds the IEnumerator to the queue
+            </summary>
+            <param name="enumerator">IEnumerator function that will be executed from the main thread.</param>
+        </member>
+        <member name="T:SKStudios.Common.Utils.UnityMainThreadDispatcher.ActionWrapper">
+            <summary>
+                Wrapper for a <see cref="F:SKStudios.Common.Utils.UnityMainThreadDispatcher.ActionWrapper._action" /> in to an <see cref="T:System.Collections.IEnumerator" /> which can be consumed by Unity
+                <see cref="T:UnityEngine.Coroutine" />s. Optionally, also calls an additional <see cref="F:SKStudios.Common.Utils.UnityMainThreadDispatcher.ActionWrapper._action" /> after completion.
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Utils.UnityMainThreadDispatcher.ActionWrapper.#ctor(System.Action)">
+            <summary>
+                Create a wrapper for the provided <paramref name="action" />
+            </summary>
+            <param name="action">action to wrap</param>
+        </member>
+        <member name="M:SKStudios.Common.Utils.UnityMainThreadDispatcher.ActionWrapper.#ctor(System.Action,System.Action)">
+            <summary>
+                <inheritdoc cref="M:SKStudios.Common.Utils.UnityMainThreadDispatcher.ActionWrapper.#ctor(System.Action)" />, and calls <paramref name="afterAction" /> afterwards.
+            </summary>
+            <param name="action">action to wrap</param>
+            <param name="afterAction">action to call after <paramref name="action" /> is called.</param>
+        </member>
+        <member name="M:SKStudios.Common.Utils.UnityMainThreadDispatcher.ActionWrapper.ActionWrapperEnumerator">
+            <summary>
+                Wrapper for <see cref="F:SKStudios.Common.Utils.UnityMainThreadDispatcher.ActionWrapper._action" />
+            </summary>
+            <returns>Wrapper for the provided delegate so that it may be executed as a <see cref="T:UnityEngine.Coroutine" /></returns>
+        </member>
+        <member name="T:SK_Common.Extensions.BoundsExtensions">
+            <summary>
+                Extensions for Unity's Bounds class.
+            </summary>
+        </member>
+        <member name="M:SK_Common.Extensions.BoundsExtensions.Verts(UnityEngine.Bounds,System.Boolean,System.Boolean)">
+            <summary>
+                Returns the verts of a given bounds
+            </summary>
+            <param name="b">Bounds to get the verts of</param>
+            <param name="includeMidpoint">Should the midpoint be included in these verts?</param>
+            <param name="includeFacePoints">Should the face points be included?</param>
+            <returns>verts of the bounds</returns>
+        </member>
+        <member name="M:SK_Common.Extensions.CameraExtensions.EyeNearPlaneDimensions(UnityEngine.Camera,UnityEngine.Camera.MonoOrStereoscopicEye)">
+            <summary>
+                Returns the quad verts of the near clip plane
+            </summary>
+            <param name="cam">The camera to return the near clip verts of</param>
+            <param name="eye">Eye to target</param>
+            <returns></returns>
+        </member>
+        <member name="T:SK_Common.Utils.Compatibility_wrappers.UnityWrapper">
+            <summary>
+                Wrapper for abstraction purposes; assists dynamic loading of unity components
+                that differ between versions
+            </summary>
+        </member>
+        <member name="F:SK_Common.Utils.Compatibility_wrappers.UnityWrapper.EngineCoreAssembly">
+            <summary>
+                Assembly of UnityEngine proper.
+            </summary>
+        </member>
+        <member name="F:SK_Common.Utils.Compatibility_wrappers.UnityWrapper.AssemblyNames">
+            <summary>
+                All assemblies to load related to the Unity engine.
+            </summary>
+        </member>
+        <member name="M:SK_Common.Utils.Compatibility_wrappers.UnityWrapper.LoadUnityType(System.String,System.String[])">
+            <summary>
+                Load a Unity type, searching <paramref name="preferredAssemblies" /> first.
+            </summary>
+            <param name="name">Name to search for</param>
+            <param name="preferredAssemblies">Assemblies to prefer while searching</param>
+            <returns></returns>
+        </member>
+        <member name="T:SK_Common.Utils.Reflection.OptimizeReflectionInvoke">
+            <summary>
+                Optimize methods that have to be repeatedly invoked by wrapping them in a <see cref="T:System.Func`1" />.
+            </summary>
+        </member>
+        <member name="M:SK_Common.Utils.Reflection.OptimizeReflectionInvoke.GetV3OutFunction(System.Reflection.MethodInfo)">
+            <summary>
+                Takes a <see cref="T:System.Reflection.MethodInfo" /> and returns a Func that takes a <see cref="T:System.Object" /> and returns a
+                <see cref="T:UnityEngine.Vector3" />.
+            </summary>
+            <param name="methodInfo">Method info to convert</param>
+            <returns></returns>
+        </member>
+        <member name="M:SK_Common.Utils.Reflection.OptimizeReflectionInvoke.GetQuatOutFunction(System.Reflection.MethodInfo)">
+            <summary>
+                Takes a <see cref="T:System.Reflection.MethodInfo" /> and returns a Func that takes a <see cref="T:System.Object" /> and returns a
+                <see cref="T:UnityEngine.Quaternion" />.
+            </summary>
+            <param name="methodInfo">Method info to convert</param>
+            <returns>The Func wrapper</returns>
+        </member>
+        <member name="T:SK_Common.Utils.VR.VrWrapper">
+            <summary>
+                Wrapper for VR functionality so that execution can be gauranteed across all platforms.
+            </summary>
+        </member>
+        <member name="T:SK_Common.Utils.VR.VrWrapper.SkvrNode">
+            <summary>
+                Wrapper for Unity InputTracking~R types.
+            </summary>
+        </member>
+        <member name="M:SK_Common.Utils.VR.VrWrapper.#cctor">
+            <summary>
+                Default to loading from the core assembly
+            </summary>
+        </member>
+        <member name="M:SK_Common.Utils.VR.VrWrapper.LoadFromAssembly(System.Reflection.Assembly)">
+            <summary>
+                Initialize the class with the given assembly
+            </summary>
+            <param name="assembly">Assembly to initialize with</param>
+        </member>
+        <member name="M:NormalSolver.RecalculateNormals(UnityEngine.Mesh,System.Single)">
+            <summary>
+                Recalculate the normals of a mesh based on an angle threshold. This takes
+                into account distinct vertices that have the same position.
+            </summary>
+            <param name="mesh"></param>
+            <param name="angle">
+                The smoothing angle. Note that triangles that already share
+                the same vertex will be smooth regardless of the angle!
+            </param>
+        </member>
+        <member name="T:Eppy.EppyTuple">
+            <summary>
+                Utility class that simplifies cration ofTuples by using
+                method calls instead of constructor calls
+            </summary>
+        </member>
+        <member name="M:Eppy.EppyTuple.Create``2(``0,``1)">
+            <summary>
+                Creates a newTuple value with the specified elements. The method
+                can be used without specifying the generic parameters, because C#
+                compiler can usually infer the actual types.
+            </summary>
+            <param name="item1">First element of theTuple</param>
+            <param name="second">Second element of theTuple</param>
+            <returns>A newly createdTuple</returns>
+        </member>
+        <member name="M:Eppy.EppyTuple.Create``3(``0,``1,``2)">
+            <summary>
+                Creates a newTuple value with the specified elements. The method
+                can be used without specifying the generic parameters, because C#
+                compiler can usually infer the actual types.
+            </summary>
+            <param name="item1">First element of theTuple</param>
+            <param name="second">Second element of theTuple</param>
+            <param name="third">Third element of theTuple</param>
+            <returns>A newly createdTuple</returns>
+        </member>
+        <member name="M:Eppy.EppyTuple.Create``4(``0,``1,``2,``3)">
+            <summary>
+                Creates a newTuple value with the specified elements. The method
+                can be used without specifying the generic parameters, because C#
+                compiler can usually infer the actual types.
+            </summary>
+            <param name="item1">First element of theTuple</param>
+            <param name="second">Second element of theTuple</param>
+            <param name="third">Third element of theTuple</param>
+            <param name="fourth">Fourth element of theTuple</param>
+            <returns>A newly createdTuple</returns>
+        </member>
+        <member name="M:Eppy.EppyTuple.Unpack``2(Eppy.EppyTuple{``0,``1},``0@,``1@)">
+            <summary>
+                Extension method that provides a concise utility for unpacking
+                Tuple components into specific out parameters.
+            </summary>
+            <param name="eppyTuple">theTuple to unpack from</param>
+            <param name="ref1">the out parameter that will be assignedTuple.Item1</param>
+            <param name="ref2">the out parameter that will be assignedTuple.Item2</param>
+        </member>
+        <member name="M:Eppy.EppyTuple.Unpack``3(Eppy.EppyTuple{``0,``1,``2},``0@,``1@,``2)">
+            <summary>
+                Extension method that provides a concise utility for unpacking
+                Tuple components into specific out parameters.
+            </summary>
+            <param name="eppyTuple">theTuple to unpack from</param>
+            <param name="ref1">the out parameter that will be assignedTuple.Item1</param>
+            <param name="ref2">the out parameter that will be assignedTuple.Item2</param>
+            <param name="ref3">the out parameter that will be assignedTuple.Item3</param>
+        </member>
+        <member name="M:Eppy.EppyTuple.Unpack``4(Eppy.EppyTuple{``0,``1,``2,``3},``0@,``1@,``2,``3)">
+            <summary>
+                Extension method that provides a concise utility for unpacking
+                Tuple components into specific out parameters.
+            </summary>
+            <param name="eppyTuple">theTuple to unpack from</param>
+            <param name="ref1">the out parameter that will be assignedTuple.Item1</param>
+            <param name="ref2">the out parameter that will be assignedTuple.Item2</param>
+            <param name="ref3">the out parameter that will be assignedTuple.Item3</param>
+            <param name="ref4">the out parameter that will be assignedTuple.Item4</param>
+        </member>
+        <member name="T:Eppy.EppyTuple`2">
+            <summary>
+                Represents a functionalTuple that can be used to store
+                two values of different types inside one object.
+            </summary>
+            <typeparam name="T1">The type of the first element</typeparam>
+            <typeparam name="T2">The type of the second element</typeparam>
+        </member>
+        <member name="M:Eppy.EppyTuple`2.#ctor(`0,`1)">
+            <summary>
+                Create a newTuple value
+            </summary>
+            <param name="item1">First element of theTuple</param>
+            <param name="item2">Second element of theTuple</param>
+        </member>
+        <member name="P:Eppy.EppyTuple`2.Item1">
+            <summary>
+                Retyurns the first element of theTuple
+            </summary>
+        </member>
+        <member name="P:Eppy.EppyTuple`2.Item2">
+            <summary>
+                Returns the second element of theTuple
+            </summary>
+        </member>
+        <member name="M:Eppy.EppyTuple`2.ToString">
+            <summary>
+                ConvertTuple to string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Eppy.EppyTuple`2.GetHashCode">
+            <summary>
+                Get the hash code of theTuple
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Eppy.EppyTuple`2.Equals(System.Object)">
+            <summary>
+                Check for equality
+            </summary>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Eppy.EppyTuple`2.Equals(Eppy.EppyTuple{`0,`1})">
+            <summary>
+                Check for equality
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Eppy.EppyTuple`2.op_Equality(Eppy.EppyTuple{`0,`1},Eppy.EppyTuple{`0,`1})">
+            <summary>
+                == Operator def
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Eppy.EppyTuple`2.op_Inequality(Eppy.EppyTuple{`0,`1},Eppy.EppyTuple{`0,`1})">
+            <summary>
+                != Operator def
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Eppy.EppyTuple`2.Unpack(System.Action{`0,`1})">
+            <summary>
+                Unpack theTuple
+            </summary>
+            <param name="unpackerDelegate"></param>
+        </member>
+        <member name="T:Eppy.EppyTuple`3">
+            <summary>
+                Represents a functional Tuple that can be used to store
+                two values of different types inside one object.
+            </summary>
+            <typeparam name="T1">The type of the first element</typeparam>
+            <typeparam name="T2">The type of the second element</typeparam>
+            <typeparam name="T3">The type of the third element</typeparam>
+        </member>
+        <member name="M:Eppy.EppyTuple`3.#ctor(`0,`1,`2)">
+            <summary>
+                Create a new Tuple value
+            </summary>
+            <param name="item1">First element of the Tuple</param>
+            <param name="item2">Second element of the Tuple</param>
+            <param name="item3">Third element of the Tuple</param>
+        </member>
+        <member name="P:Eppy.EppyTuple`3.Item1">
+            <summary>
+                Retyurns the first element of the Tuple
+            </summary>
+        </member>
+        <member name="P:Eppy.EppyTuple`3.Item2">
+            <summary>
+                Returns the second element of the Tuple
+            </summary>
+        </member>
+        <member name="P:Eppy.EppyTuple`3.Item3">
+            <summary>
+                Returns the second element of the Tuple
+            </summary>
+        </member>
+        <member name="T:Eppy.EppyTuple`4">
+            <summary>
+                Represents a functional Tuple that can be used to store
+                two values of different types inside one object.
+            </summary>
+            <typeparam name="T1">The type of the first element</typeparam>
+            <typeparam name="T2">The type of the second element</typeparam>
+            <typeparam name="T3">The type of the third element</typeparam>
+            <typeparam name="T4">The type of the fourth element</typeparam>
+        </member>
+        <member name="M:Eppy.EppyTuple`4.#ctor(`0,`1,`2,`3)">
+            <summary>
+                Create a new Tuple value
+            </summary>
+            <param name="item1">First element of the Tuple</param>
+            <param name="second">Second element of the Tuple</param>
+            <param name="third">Third element of the Tuple</param>
+            <param name="fourth">Fourth element of the Tuple</param>
+        </member>
+        <member name="P:Eppy.EppyTuple`4.Item1">
+            <summary>
+                Retyurns the first element of the Tuple
+            </summary>
+        </member>
+        <member name="P:Eppy.EppyTuple`4.Item2">
+            <summary>
+                Returns the second element of the Tuple
+            </summary>
+        </member>
+        <member name="P:Eppy.EppyTuple`4.Item3">
+            <summary>
+                Returns the second element of the Tuple
+            </summary>
+        </member>
+        <member name="P:Eppy.EppyTuple`4.Item4">
+            <summary>
+                Returns the second element of the Tuple
+            </summary>
+        </member>
+        <member name="M:Eppy.EppyTuple`4.Equals(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:Eppy.EppyTuple`4.op_Equality(Eppy.EppyTuple{`0,`1,`2,`3},Eppy.EppyTuple{`0,`1,`2,`3})">
+            <summary>
+                Equality comparer
+            </summary>
+            <param name="a">a</param>
+            <param name="b">b</param>
+            <returns>equality</returns>
+        </member>
+    </members>
+</doc>

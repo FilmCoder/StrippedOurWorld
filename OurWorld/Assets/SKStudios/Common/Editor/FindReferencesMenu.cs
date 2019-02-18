@@ -1,0 +1,77 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEditor;
+using UnityEngine;
+
+namespace SKStudios.Common.Editor {
+#if SKS_DEV
+    public class FindReferencesMenu : UnityEditor.Editor
+    {
+
+        [MenuItem("CONTEXT/Component/Find references to this")]
+        private static void FindReferences(MenuCommand data)
+        {
+            Object context = data.context;
+            if (context)
+            {
+                var comp = context as Component;
+                if (comp)
+                    FindReferencesTo(comp);
+            }
+        }
+
+        [MenuItem("Assets/Find references to this")]
+        private static void FindReferencesToAsset(MenuCommand data)
+        {
+            var selected = Selection.activeObject;
+            if (selected)
+                FindReferencesTo(selected);
+        }
+
+        private static void FindReferencesTo(Object to)
+        {
+            var referencedBy = new List<Object>();
+            var allObjects = Object.FindObjectsOfType<GameObject>();
+            for (int j = 0; j < allObjects.Length; j++)
+            {
+                var go = allObjects[j];
+
+                if (PrefabUtility.GetPrefabType(go) == PrefabType.PrefabInstance)
+                {
+                    if (PrefabUtility.GetPrefabParent(go) == to)
+                    {
+                        UnityEngine.Debug.Log(string.Format("referenced by {0}, {1}", go.name, go.GetType()), go);
+                        referencedBy.Add(go);
+                    }
+                }
+
+                var components = go.GetComponents<Component>();
+                for (int i = 0; i < components.Length; i++)
+                {
+                    var c = components[i];
+                    if (!c) continue;
+
+                    var so = new SerializedObject(c);
+                    var sp = so.GetIterator();
+
+                    while (sp.NextVisible(true))
+                        if (sp.propertyType == SerializedPropertyType.ObjectReference)
+                        {
+                            if (sp.objectReferenceValue == to)
+                            {
+                                UnityEngine.Debug.Log(string.Format("referenced by {0}, {1}", c.name, c.GetType()), c);
+                                referencedBy.Add(c.gameObject);
+                            }
+                        }
+                }
+            }
+
+            if (referencedBy.Any())
+                Selection.objects = referencedBy.ToArray();
+            else UnityEngine.Debug.Log("no references in scene");
+        }
+    }
+#endif
+}
+

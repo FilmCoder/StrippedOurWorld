@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Portal Ignore
+  - PhysicsPassthroughDuplicate
+  - TeleportIgnore
+  - ExcludeTeleport
+  - SKSEditorTemp
+  - PhysDupe
   layers:
   - Default
   - TransparentFX
@@ -13,9 +19,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - CustomRenderer
+  - CustomRendererOnly
+  - CustomRendererPlaceholder
   - 
   - 
   - 

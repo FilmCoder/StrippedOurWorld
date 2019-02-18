@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RenderStructs</name>
+    </assembly>
+    <members>
+        <member name="T:SKStudios.Common.Rendering.TextureTargetEye">
+            <summary>
+                Eye to target with this render
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Rendering.TextureTargetEye.Left">
+            <summary>
+                Left eye
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Rendering.TextureTargetEye.Right">
+            <summary>
+                Right eye
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Rendering.TextureTargetEye.Unset">
+            <summary>
+                Unspecified eye
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Rendering.TextureTargetEye.Count">
+            <summary>
+                Count
+            </summary>
+        </member>
+        <member name="T:SKStudios.Common.Rendering.TextureTargetEyeMethods">
+            <summary>
+                Extension to pull shader keywords associated with enum without gc
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Rendering.TextureTargetEyeMethods.Name(SKStudios.Common.Rendering.TextureTargetEye)">
+            <summary>
+                Get the shader keyword associated with a TextureTargetEye
+            </summary>
+            <param name="t">this</param>
+            <returns>Shader keyword for the given eye's texture</returns>
+        </member>
+        <member name="M:SKStudios.Common.Rendering.TextureTargetEyeMethods.StereoTargetToTextureTarget(UnityEngine.StereoTargetEyeMask)">
+            <summary>
+                Converts a StereoTargetEyeMask into its corresponding TextureTargetEye equivalent
+            </summary>
+            <param name="eye">StereoTargetEyeMask to target</param>
+            <returns>TextureTargetEye equivalent</returns>
+        </member>
+        <member name="T:SKStudios.Common.Rendering.RenderData">
+            <summary>
+                Struct containing all of the data required for a SKSCustomRender
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Rendering.RenderData.ScreenSize">
+            <summary>
+                Size of the screen
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Rendering.RenderData.RenderProperties">
+            <summary>
+                RenderProperty flag enum
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Rendering.RenderData.RenderingCamera">
+            <summary>
+                Camera that is being used to render the effect
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Rendering.RenderData.OriginCamera">
+            <summary>
+                Camera that triggered the render
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Rendering.RenderData.ProjectionMatrix">
+            <summary>
+                Projection Matrix to be used for the render (This will not be equivalent to the Camera's Projection matrix with
+                stereo rendering)
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Rendering.RenderData.TargetEye">
+            <summary>
+                Eye to target for this render
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Rendering.RenderData.Material">
+            <summary>
+                Material to render to
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Rendering.RenderData.SourceRenderer">
+            <summary>
+                Entry point renderer
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Rendering.RenderData.TargetRenderer">
+            <summary>
+                End point renderer
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Rendering.RenderData.SourceCollider">
+            <summary>
+                Entry point Collider
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Rendering.RenderData.TargetCollider">
+            <summary>
+                End point Collider
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Rendering.RenderData.Mesh">
+            <summary>
+                Mesh being used on the SourceRenderer, cached for speed
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Rendering.RenderData.CurrentDepth">
+            <summary>
+                Current depth of the render
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Rendering.RenderData.MaxRecursion">
+            <summary>
+                Maximum depth of the render
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Rendering.RenderData.AdaptiveQuality">
+            <summary>
+                Should adaptive quality be used?
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Rendering.RenderData.TargetTexture">
+            <summary>
+                Texture that was rendered to- set internally by RenderCamera
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Rendering.RenderData.PixelPadding">
+            <summary>
+                Number of pixels to be used to pad this render on all sides
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Rendering.RenderData.ViewMatrix">
+            <summary>
+                The current view matrix for this eye
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Rendering.RenderData.InitCache">
+            <summary>
+                Init the cache to contain clones of this render data
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Rendering.RenderData.Clone">
+            <summary>
+                Return a clone of this RenderData
+            </summary>
+            <returns>A clone of this RenderData</returns>
+        </member>
+        <member name="M:SKStudios.Common.Rendering.RenderData.CopyFrameData(SKStudios.Common.Rendering.RenderData)">
+            <summary>
+                Copy frame data that is changed on a per-frame basis
+            </summary>
+            <param name="other">Other RenderData</param>
+        </member>
+        <member name="T:SKStudios.Common.Rendering.RenderProperties">
+            <summary>
+                Properties of a request for a SK Effect Render.
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Rendering.RenderProperties.FirstRender">
+            <summary>
+                Base step of recursion
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Rendering.RenderProperties.Optimize">
+            <summary>
+                Render should be optimized
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Rendering.RenderProperties.Is3D">
+            <summary>
+                Renderer is non-planar
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Rendering.RenderProperties.ObliquePlane">
+            <summary>
+                Oblique culling to be used
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Rendering.RenderProperties.InvertedCached">
+            <summary>
+                The render be done with an invered z buffer
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Rendering.RenderProperties.UvFlipCached">
+            <summary>
+                Flip the UV on the Y axis for differing hardware
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Rendering.RenderProperties.Vr">
+            <summary>
+                A VR render
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Rendering.RenderProperties.Mirror">
+            <summary>
+                The render is acting as a Mirror
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Rendering.RenderProperties.SinglePass">
+            <summary>
+                Single-pass stereo mode being employed
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Rendering.RenderProperties.LowQuality">
+            <summary>
+                Is a low quality effect
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Rendering.RenderProperties.RipCustomSkybox">
+            <summary>
+                Should a custom skybox be ripped?
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Rendering.RenderProperties.AggressiveOptimization">
+            <summary>
+                Should aggressive, physics-based optimization be used?
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Rendering.RenderProperties.RecursionDisabled">
+            <summary>
+                Should recursion be disabled?
+            </summary>
+        </member>
+        <member name="F:SKStudios.Common.Rendering.RenderProperties.DepthTransfer">
+            <summary>
+                Should depth be transferred to the final rendered image?
+            </summary>
+        </member>
+    </members>
+</doc>

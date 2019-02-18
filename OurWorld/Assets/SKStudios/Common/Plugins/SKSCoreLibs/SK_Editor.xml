@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SK_Editor</name>
+    </assembly>
+    <members>
+        <member name="T:SKStudios.Common.Editor.ProjectCache">
+            <summary>
+                Class that holds a cache of various project-constant settings and properties
+                Contributed to heavily by Nate Tessman (@madgvox)
+            </summary>
+        </member>
+        <member name="P:SKStudios.Common.Editor.ProjectCache.UnityTagManager">
+            <summary>
+                The TagManager for this project
+            </summary>
+        </member>
+        <member name="T:SKStudios.Common.Editor.SKSEditorUtil">
+            <summary>
+                Class containing editor utilities
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Editor.SKSEditorUtil.AddDefine(System.String,UnityEditor.BuildTargetGroup)">
+            <summary>
+                Add a scripting define symbol to the project
+            </summary>
+            <param name="define">Define to add</param>
+            <param name="group">BuildTargetGroup to target</param>
+        </member>
+        <member name="M:SKStudios.Common.Editor.SKSEditorUtil.RemoveDefine(System.String,UnityEditor.BuildTargetGroup)">
+            <summary>
+                Remove a scripting define symbol from the project
+            </summary>
+            <param name="define">Define to add</param>
+            <param name="group">BuildTargetGroup to target</param>
+        </member>
+        <member name="M:SKStudios.Common.Editor.SKSEditorUtil.DrawGuiIndented``1(System.Func{``0})">
+            <summary>
+                Draw a GUI element with function a at the current EditorGUI Indent Level.
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="guiMethod">GUI Func</param>
+            <returns></returns>
+        </member>
+        <member name="M:SKStudios.Common.Editor.SKSEditorUtil.DrawRectangle(UnityEngine.Rect,UnityEngine.Color)">
+            <summary>
+                Untested
+            </summary>
+            <param name="position">Rect to draw</param>
+            <param name="color">Color of the rect</param>
+        </member>
+        <member name="T:SKStudios.Common.Editor.SKTagManager">
+            <summary>
+                Class containing Tag Database management methods
+                Contributed to heavily by Nate Tessman (@madgvox)
+            </summary>
+        </member>
+        <member name="M:SKStudios.Common.Editor.SKTagManager.CreateLayer(System.String)">
+            <summary>
+                Creates a layer with the given name
+            </summary>
+            <param name="layerName">Layer to add</param>
+            <returns>true if the layer was successfully created or already exists, false otherwise</returns>
+        </member>
+        <member name="M:SKStudios.Common.Editor.SKTagManager.CreateTag(System.String)">
+            <summary>
+                Create a tag with the given name
+            </summary>
+            <param name="tagName">Tag to add</param>
+            <returns>true if the tag was successfully created or already exists.</returns>
+        </member>
+    </members>
+</doc>
