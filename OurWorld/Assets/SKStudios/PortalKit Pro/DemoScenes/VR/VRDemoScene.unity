@@ -8172,6 +8172,7 @@ MonoBehaviour:
   autoLoadSetup: 1
   setups:
   - {fileID: 114878109862755484}
+  - {fileID: 0}
   excludeTargetGroups: 1b0000001a000000
   persistOnLoad: 0
 --- !u!114 &114420819668231210
