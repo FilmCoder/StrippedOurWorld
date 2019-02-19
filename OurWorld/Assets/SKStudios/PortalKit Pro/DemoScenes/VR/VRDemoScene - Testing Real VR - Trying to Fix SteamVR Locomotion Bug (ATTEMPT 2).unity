@@ -4404,7 +4404,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 683028504}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ec31bf4cff5bfe47a6ba629cebc1ae6, type: 3}
   m_Name: 
@@ -4870,7 +4870,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 512253866}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1387669087}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 225045de4af70894caf7cdc7c250d9e4, type: 3}
@@ -4973,7 +4973,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1849232202}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2053430071}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 225045de4af70894caf7cdc7c250d9e4, type: 3}
@@ -8888,6 +8888,12 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &1387669087 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1812843969442050, guid: efa6a2b7b7a00eb4cae782d05e2bccc9,
+    type: 3}
+  m_PrefabInstance: {fileID: 512253866}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1412406740
 GameObject:
   m_ObjectHideFlags: 0
@@ -12842,6 +12848,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051640769}
   m_CullTransparentMesh: 0
+--- !u!1 &2053430071 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1812843969442050, guid: efa6a2b7b7a00eb4cae782d05e2bccc9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1849232202}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2054101008
 GameObject:
   m_ObjectHideFlags: 0
@@ -13652,9 +13664,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableTeleport: 1
   targetListPolicy: {fileID: 1144970839}
-  enableBodyCollisions: 1
-  ignoreGrabbedCollisions: 1
-  ignoreCollisionsWith: []
+  enableBodyCollisions: 0
+  ignoreGrabbedCollisions: 0
+  ignoreCollisionsWith:
+  - {fileID: 1387669087}
+  - {fileID: 2053430071}
   headsetYOffset: 0.2
   movementThreshold: 0.0015
   playAreaMovementThreshold: 0.00075
