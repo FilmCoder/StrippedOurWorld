@@ -7188,9 +7188,8 @@ Transform:
   - {fileID: 281664667}
   - {fileID: 1176504743}
   - {fileID: 1953388452}
-  - {fileID: 224492991040522848}
   m_Father: {fileID: 4562396877532686}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1137714189
 MonoBehaviour:
@@ -7224,11 +7223,11 @@ MonoBehaviour:
   autoManageVRSettings: 1
   autoLoadSetup: 1
   setups:
-  - {fileID: 1082870205}
-  - {fileID: 1005449385}
   - {fileID: 1824398789}
   - {fileID: 1321794766}
+  - {fileID: 1082870205}
   - {fileID: 137704836}
+  - {fileID: 1005449385}
   excludeTargetGroups: 1a0000001b000000
   persistOnLoad: 0
 --- !u!1 &1144970837
@@ -14517,7 +14516,7 @@ Transform:
   m_LocalScale: {x: 0.3279339, y: 0.3279339, z: 0.3279339}
   m_Children: []
   m_Father: {fileID: 4562396877532686}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4348849553915364
 Transform:
@@ -14547,7 +14546,7 @@ Transform:
   - {fileID: 4590340498298856}
   - {fileID: 4480639126271198}
   m_Father: {fileID: 4562396877532686}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4480639126271198
 Transform:
@@ -14593,6 +14592,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4569162476621834}
+  - {fileID: 224492991040522848}
   - {fileID: 4452449873318506}
   - {fileID: 4269725733675964}
   - {fileID: 1137714188}
@@ -14607,7 +14607,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060670835407552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.95, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4800782650197606}
@@ -16411,12 +16411,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoPopulateObjectReferences: 1
-  actualBoundaries: {fileID: 1972421694560696}
-  actualHeadset: {fileID: 1553311263683724}
-  actualLeftController: {fileID: 1373188245155298}
-  actualRightController: {fileID: 1321766620207516}
-  modelAliasLeftController: {fileID: 1354802657650334}
-  modelAliasRightController: {fileID: 1091514558000014}
+  actualBoundaries: {fileID: 0}
+  actualHeadset: {fileID: 0}
+  actualLeftController: {fileID: 0}
+  actualRightController: {fileID: 0}
+  modelAliasLeftController: {fileID: 0}
+  modelAliasRightController: {fileID: 0}
   cachedSystemSDKInfo:
     baseTypeName: VRTK.SDK_BaseSystem
     fallbackTypeName: VRTK.SDK_FallbackSystem
@@ -17041,8 +17041,8 @@ RectTransform:
   - {fileID: 4018425937688100}
   - {fileID: 4714345105383446}
   - {fileID: 224301939423212402}
-  m_Father: {fileID: 1137714188}
-  m_RootOrder: 4
+  m_Father: {fileID: 4562396877532686}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
