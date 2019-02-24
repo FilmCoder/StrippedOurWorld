@@ -22,10 +22,10 @@ TagManager:
   - CustomRenderer
   - CustomRendererOnly
   - CustomRendererPlaceholder
-  - 
-  - 
-  - 
-  - 
+  - FogVolumeShadowCaster
+  - FogVolume
+  - FogVolumeSurrogate
+  - FogVolumeUniform
   - 
   - 
   - 
