@@ -1,0 +1,437 @@
+fileFormatVersion: 2
+guid: fbc8cd6c6c0cba84aafa3b8dd4770e29
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Abtn
+    100002: Abtn 1
+    100004: Abtn 2
+    100006: animate
+    100008: Bbtn
+    100010: Bbtn 1
+    100012: Bbtn 2
+    100014: draw
+    100016: draw-label
+    100018: equals1
+    100020: equals1 1
+    100022: equals1 2
+    100024: Hand
+    100026: hand
+    100028: Hand 1
+    100030: hand 1
+    100032: Hand 2
+    100034: hand 2
+    100036: handle1
+    100038: handle1 1
+    100040: handle1 2
+    100042: handle1 3
+    100044: handle1 4
+    100046: handle1 5
+    100048: hands
+    100050: hands 1
+    100052: hands 2
+    100054: lefthand
+    100056: lefthand 1
+    100058: lefthand 2
+    100060: Map
+    100062: modify
+    100064: modify_label
+    100066: NewGroup0
+    100068: NewLayer0r
+    100070: NewLayer1
+    100072: NewLayer2
+    100074: NewLayer2 1
+    100076: NewLayer2 2
+    100078: NewLayer4
+    100080: NewLayer4 1
+    100082: NewLayer4 2
+    100084: ocbtn
+    100086: ocbtn 1
+    100088: ocbtn 2
+    100090: ocbtn 3
+    100092: ocbtn 4
+    100094: ocbtn 5
+    100096: righthand
+    100098: righthand 1
+    100100: righthand 2
+    100102: Root
+    100104: roundhardware
+    100106: roundhardware 1
+    100108: roundhardware 2
+    100110: roundhardware 3
+    100112: roundhardware 4
+    100114: roundhardware 5
+    100116: RTthumbstick
+    100118: RTthumbstick 1
+    100120: RTthumbstick 2
+    100122: RTthumbstick 3
+    100124: RTthumbstick 4
+    100126: RTthumbstick 5
+    100128: Swag-layer
+    100130: tptrigger
+    100132: tptrigger 1
+    100134: tptrigger 2
+    100136: trigger
+    100138: trigger 1
+    100140: trigger 2
+    100142: //RootNode
+    100144: ViewPoint_0
+    100146: viewpoints
+    100148: Xbtn
+    100150: Xbtn 1
+    100152: Xbtn 2
+    100154: Ybtn
+    100156: Ybtn 1
+    100158: Ybtn 2
+    400000: Abtn
+    400002: Abtn 1
+    400004: Abtn 2
+    400006: animate
+    400008: Bbtn
+    400010: Bbtn 1
+    400012: Bbtn 2
+    400014: draw
+    400016: draw-label
+    400018: equals1
+    400020: equals1 1
+    400022: equals1 2
+    400024: Hand
+    400026: hand
+    400028: Hand 1
+    400030: hand 1
+    400032: Hand 2
+    400034: hand 2
+    400036: handle1
+    400038: handle1 1
+    400040: handle1 2
+    400042: handle1 3
+    400044: handle1 4
+    400046: handle1 5
+    400048: hands
+    400050: hands 1
+    400052: hands 2
+    400054: lefthand
+    400056: lefthand 1
+    400058: lefthand 2
+    400060: Map
+    400062: modify
+    400064: modify_label
+    400066: NewGroup0
+    400068: NewLayer0r
+    400070: NewLayer1
+    400072: NewLayer2
+    400074: NewLayer2 1
+    400076: NewLayer2 2
+    400078: NewLayer4
+    400080: NewLayer4 1
+    400082: NewLayer4 2
+    400084: ocbtn
+    400086: ocbtn 1
+    400088: ocbtn 2
+    400090: ocbtn 3
+    400092: ocbtn 4
+    400094: ocbtn 5
+    400096: righthand
+    400098: righthand 1
+    400100: righthand 2
+    400102: Root
+    400104: roundhardware
+    400106: roundhardware 1
+    400108: roundhardware 2
+    400110: roundhardware 3
+    400112: roundhardware 4
+    400114: roundhardware 5
+    400116: RTthumbstick
+    400118: RTthumbstick 1
+    400120: RTthumbstick 2
+    400122: RTthumbstick 3
+    400124: RTthumbstick 4
+    400126: RTthumbstick 5
+    400128: Swag-layer
+    400130: tptrigger
+    400132: tptrigger 1
+    400134: tptrigger 2
+    400136: trigger
+    400138: trigger 1
+    400140: trigger 2
+    400142: //RootNode
+    400144: ViewPoint_0
+    400146: viewpoints
+    400148: Xbtn
+    400150: Xbtn 1
+    400152: Xbtn 2
+    400154: Ybtn
+    400156: Ybtn 1
+    400158: Ybtn 2
+    2100000: Single Sided Material
+    2100002: Double Sided Material
+    2300000: Abtn
+    2300002: Abtn 1
+    2300004: Abtn 2
+    2300006: Bbtn
+    2300008: Bbtn 1
+    2300010: Bbtn 2
+    2300012: draw-label
+    2300014: equals1
+    2300016: equals1 1
+    2300018: equals1 2
+    2300020: Hand
+    2300022: hand
+    2300024: Hand 1
+    2300026: hand 1
+    2300028: Hand 2
+    2300030: hand 2
+    2300032: handle1
+    2300034: handle1 1
+    2300036: handle1 2
+    2300038: handle1 3
+    2300040: handle1 4
+    2300042: handle1 5
+    2300044: modify_label
+    2300046: NewLayer0r
+    2300048: NewLayer1
+    2300050: NewLayer2
+    2300052: NewLayer2 1
+    2300054: NewLayer2 2
+    2300056: NewLayer4
+    2300058: NewLayer4 1
+    2300060: NewLayer4 2
+    2300062: ocbtn
+    2300064: ocbtn 1
+    2300066: ocbtn 2
+    2300068: ocbtn 3
+    2300070: ocbtn 4
+    2300072: ocbtn 5
+    2300074: roundhardware
+    2300076: roundhardware 1
+    2300078: roundhardware 2
+    2300080: roundhardware 3
+    2300082: roundhardware 4
+    2300084: roundhardware 5
+    2300086: RTthumbstick
+    2300088: RTthumbstick 1
+    2300090: RTthumbstick 2
+    2300092: RTthumbstick 3
+    2300094: RTthumbstick 4
+    2300096: RTthumbstick 5
+    2300098: tptrigger
+    2300100: tptrigger 1
+    2300102: tptrigger 2
+    2300104: trigger
+    2300106: trigger 1
+    2300108: trigger 2
+    2300110: Xbtn
+    2300112: Xbtn 1
+    2300114: Xbtn 2
+    2300116: Ybtn
+    2300118: Ybtn 1
+    2300120: Ybtn 2
+    3300000: Abtn
+    3300002: Abtn 1
+    3300004: Abtn 2
+    3300006: Bbtn
+    3300008: Bbtn 1
+    3300010: Bbtn 2
+    3300012: draw-label
+    3300014: equals1
+    3300016: equals1 1
+    3300018: equals1 2
+    3300020: Hand
+    3300022: hand
+    3300024: Hand 1
+    3300026: hand 1
+    3300028: Hand 2
+    3300030: hand 2
+    3300032: handle1
+    3300034: handle1 1
+    3300036: handle1 2
+    3300038: handle1 3
+    3300040: handle1 4
+    3300042: handle1 5
+    3300044: modify_label
+    3300046: NewLayer0r
+    3300048: NewLayer1
+    3300050: NewLayer2
+    3300052: NewLayer2 1
+    3300054: NewLayer2 2
+    3300056: NewLayer4
+    3300058: NewLayer4 1
+    3300060: NewLayer4 2
+    3300062: ocbtn
+    3300064: ocbtn 1
+    3300066: ocbtn 2
+    3300068: ocbtn 3
+    3300070: ocbtn 4
+    3300072: ocbtn 5
+    3300074: roundhardware
+    3300076: roundhardware 1
+    3300078: roundhardware 2
+    3300080: roundhardware 3
+    3300082: roundhardware 4
+    3300084: roundhardware 5
+    3300086: RTthumbstick
+    3300088: RTthumbstick 1
+    3300090: RTthumbstick 2
+    3300092: RTthumbstick 3
+    3300094: RTthumbstick 4
+    3300096: RTthumbstick 5
+    3300098: tptrigger
+    3300100: tptrigger 1
+    3300102: tptrigger 2
+    3300104: trigger
+    3300106: trigger 1
+    3300108: trigger 2
+    3300110: Xbtn
+    3300112: Xbtn 1
+    3300114: Xbtn 2
+    3300116: Ybtn
+    3300118: Ybtn 1
+    3300120: Ybtn 2
+    4300000: NewLayer1
+    4300002: draw-label
+    4300004: handle1
+    4300006: tptrigger
+    4300008: ocbtn
+    4300010: Ybtn
+    4300012: Xbtn
+    4300014: RTthumbstick
+    4300016: roundhardware
+    4300018: NewLayer2
+    4300020: Hand
+    4300022: NewLayer4
+    4300024: hand
+    4300026: trigger
+    4300028: handle1
+    4300030: ocbtn
+    4300032: Abtn
+    4300034: Bbtn
+    4300036: RTthumbstick
+    4300038: roundhardware
+    4300040: equals1
+    4300042: modify_label
+    4300044: handle1
+    4300046: tptrigger
+    4300048: ocbtn
+    4300050: Ybtn
+    4300052: Xbtn
+    4300054: RTthumbstick
+    4300056: roundhardware
+    4300058: NewLayer2
+    4300060: Hand
+    4300062: NewLayer4
+    4300064: hand
+    4300066: trigger
+    4300068: handle1
+    4300070: ocbtn
+    4300072: Abtn
+    4300074: Bbtn
+    4300076: RTthumbstick
+    4300078: roundhardware
+    4300080: equals1
+    4300082: NewLayer0r
+    4300084: handle1
+    4300086: tptrigger
+    4300088: ocbtn
+    4300090: Ybtn
+    4300092: Xbtn
+    4300094: RTthumbstick
+    4300096: roundhardware
+    4300098: NewLayer2
+    4300100: Hand
+    4300102: NewLayer4
+    4300104: hand
+    4300106: trigger
+    4300108: handle1
+    4300110: ocbtn
+    4300112: Abtn
+    4300114: Bbtn
+    4300116: RTthumbstick
+    4300118: roundhardware
+    4300120: equals1
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

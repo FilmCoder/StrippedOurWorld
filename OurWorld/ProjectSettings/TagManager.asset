@@ -10,6 +10,7 @@ TagManager:
   - ExcludeTeleport
   - SKSEditorTemp
   - PhysDupe
+  - GameManager
   layers:
   - Default
   - TransparentFX
