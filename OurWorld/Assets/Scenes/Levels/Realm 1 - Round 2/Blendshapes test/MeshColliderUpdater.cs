@@ -5,7 +5,6 @@ using UnityEngine;
 public class MeshColliderUpdater : MonoBehaviour
 {
     public int blendKeyIndex = 0;
-    // public float blendAmount = 100;
 
     private SkinnedMeshRenderer render;
     private MeshCollider meshCollider;
@@ -16,7 +15,6 @@ public class MeshColliderUpdater : MonoBehaviour
         meshCollider = GetComponent<MeshCollider>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         float blendWeight = render.GetBlendShapeWeight(blendKeyIndex);
