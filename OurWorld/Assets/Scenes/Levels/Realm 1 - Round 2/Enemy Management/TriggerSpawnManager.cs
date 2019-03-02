@@ -22,21 +22,8 @@ public class TriggerSpawnManager : MonoBehaviour
         headsetCollision.HeadsetCollisionDetect -= new HeadsetCollisionEventHandler(OnHeadsetCollisionDetect);
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnHeadsetCollisionDetect(object sender, HeadsetCollisionEventArgs e)
     {
-        Debug.Log("collisionnnnn");
         TriggerSpawnManagerLogic.ProcessCollider(e.collider);
     }
 }
@@ -50,6 +37,7 @@ public class TriggerSpawnManager : MonoBehaviour
 [System.Serializable]
 public class SpawnInformation
 {
+    public string enemyGroupName;
     public GameObject[] spawnTriggers;
     public GameObject[] killTriggers;
     public GameObject[] spawnObjects;
@@ -121,10 +109,4 @@ public class TriggerSpawnManagerLogic
             }
         }
     }
-
-    // check if spawn trigger
-      // then reactivate objects
-    // check if kill trigger
-      // then deactivate objects
-    
 }
