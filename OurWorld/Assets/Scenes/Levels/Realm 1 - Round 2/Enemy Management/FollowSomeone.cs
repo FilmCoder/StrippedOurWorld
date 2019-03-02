@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class FollowSomeone : MonoBehaviour
 {
+    public bool followMainCamera = false;
     public GameObject target;
     private NavMeshAgent agent;
 

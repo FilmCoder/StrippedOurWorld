@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 3278685}
   - component: {fileID: 3278684}
   m_Layer: 0
-  m_Name: New Game Object
+  m_Name: Section 6 Door Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -443,9 +443,9 @@ MonoBehaviour:
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges:
-  - a: 37
-    b: 32
-  m_SelectedVertices: 2500000020000000
+  - a: 10
+    b: 11
+  m_SelectedVertices: 0a0000000b000000
 --- !u!23 &3278686
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -519,12 +519,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3278683}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39, y: 0, z: -28}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.000000081460335, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.17, y: 0, z: -27}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_Father: {fileID: 843930522}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &86634376
 GameObject:
@@ -2624,6 +2624,7 @@ GameObject:
   - component: {fileID: 240977321}
   - component: {fileID: 240977324}
   - component: {fileID: 240977323}
+  - component: {fileID: 240977325}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: GameManager
@@ -2711,6 +2712,18 @@ MonoBehaviour:
   targetListPolicy: {fileID: 0}
   headsetColliding: 0
   collidingWith: {fileID: 0}
+--- !u!114 &240977325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240977320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd51e0ca34370a74c8746433e18e5ac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &257921094
 GameObject:
   m_ObjectHideFlags: 0
@@ -6238,8 +6251,10 @@ MonoBehaviour:
   assetGuid: 
   m_IsSelectable: 1
   m_SelectedFaces: 
-  m_SelectedEdges: []
-  m_SelectedVertices: 
+  m_SelectedEdges:
+  - a: 63
+    b: 64
+  m_SelectedVertices: 3f00000040000000
 --- !u!23 &584428642
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6335,7 +6350,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &606289318
 GameObject:
@@ -9394,7 +9409,6 @@ GameObject:
   - component: {fileID: 843930522}
   - component: {fileID: 848972478}
   - component: {fileID: 843792673}
-  - component: {fileID: 843792672}
   - component: {fileID: 843761595}
   - component: {fileID: 843761596}
   m_Layer: 0
@@ -9430,19 +9444,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 0}
---- !u!114 &843792672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843761594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5885aaa654c443349aa7814944377485, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blendKeyIndex: 1
 --- !u!114 &843792673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9455,7 +9456,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5885aaa654c443349aa7814944377485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blendKeyIndex: 0
 --- !u!4 &843930522
 Transform:
   m_ObjectHideFlags: 0
@@ -9470,6 +9470,7 @@ Transform:
   - {fileID: 1842552838}
   - {fileID: 1531949009}
   - {fileID: 2105497637}
+  - {fileID: 3278689}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29680,7 +29681,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5885aaa654c443349aa7814944377485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blendKeyIndex: 0
 --- !u!4 &1834903064
 Transform:
   m_ObjectHideFlags: 0

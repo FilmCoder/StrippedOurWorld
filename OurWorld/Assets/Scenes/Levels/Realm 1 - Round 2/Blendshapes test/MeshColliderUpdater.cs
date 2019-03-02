@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class MeshColliderUpdater : MonoBehaviour
 {
-    public int blendKeyIndex = 0;
-
     private SkinnedMeshRenderer render;
     private MeshCollider meshCollider;
 
@@ -17,8 +15,11 @@ public class MeshColliderUpdater : MonoBehaviour
 
     void Update()
     {
-        float blendWeight = render.GetBlendShapeWeight(blendKeyIndex);
-        render.SetBlendShapeWeight(blendKeyIndex, blendWeight);
+        for(int i=0; i < render.sharedMesh.blendShapeCount; i++)
+        {
+            float blendWeight = render.GetBlendShapeWeight(i);
+            render.SetBlendShapeWeight(i, blendWeight);
+        }
         Mesh bakeMesh = new Mesh();
         render.BakeMesh(bakeMesh);
         meshCollider.sharedMesh = bakeMesh;
