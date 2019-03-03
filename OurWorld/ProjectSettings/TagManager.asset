@@ -11,6 +11,7 @@ TagManager:
   - SKSEditorTemp
   - PhysDupe
   - GameManager
+  - FlashlightTrigger
   layers:
   - Default
   - TransparentFX
